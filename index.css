@@ -2187,3 +2187,32 @@ footer {
         display: none !important;
     }
 }
+
+/* ── Mobile hero fixes (max 768px) ─────────────────────────── */
+@media (max-width: 768px) {
+
+    /* 2. Hero image: keep 16/9 but enforce a taller minimum */
+    .hiw {
+        aspect-ratio: 16 / 9;
+        min-height: 220px;
+        border-radius: 1.25rem;
+    }
+
+    /* 3. Overlay: anchored bottom-left with inset — asymmetric and premium */
+    .hcc {
+        bottom: -1.25rem;
+        left: 1rem;
+        right: auto;
+        transform: none;
+        width: min(78%, 300px);
+        padding: .85rem 1.1rem;
+        border-radius: 1rem;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, .14);
+        backdrop-filter: blur(10px);
+    }
+
+    /* room for the overlay below the image */
+    .hv {
+        padding-bottom: 2.75rem;
+    }
+}
