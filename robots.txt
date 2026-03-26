@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Host: manumarquez7.github.io
+Sitemap: https://manumarquez7.github.io/MarquezWeb/sitemap.xml
