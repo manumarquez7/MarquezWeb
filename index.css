@@ -113,6 +113,7 @@ h2 em {
     font-weight: 500
 }
 
+/* WhatsApp bubble — desktop only */
 .wa-b {
     position: fixed;
     bottom: 1.5rem;
@@ -140,11 +141,12 @@ h2 em {
     height: 30px
 }
 
+/* ── NAVBAR: simplificada — solo logo + CTA ── */
 nav {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, .9);
+    background: rgba(255, 255, 255, .95);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--s200)
 }
@@ -153,10 +155,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: 64px;
     gap: 1rem
 }
 
+/* Links de nav ocultos en landing — reducen fuga */
 .nl {
     display: none;
     align-items: center;
@@ -180,23 +183,24 @@ nav {
     color: var(--v)
 }
 
+/* CTA nav: más llamativo, texto actualizado */
 .nc {
     display: flex;
     align-items: center;
     gap: .4rem;
-    background: var(--v);
+    background: var(--wa);
     color: #fff;
-    padding: .55rem 1.25rem;
+    padding: .6rem 1.35rem;
     border-radius: 9999px;
-    font-size: .82rem;
+    font-size: .85rem;
     font-weight: 800;
-    box-shadow: 0 4px 18px rgba(124, 58, 237, .35);
+    box-shadow: 0 4px 18px rgba(37, 211, 102, .35);
     transition: background .2s, transform .2s;
     white-space: nowrap
 }
 
 .nc:hover {
-    background: var(--vd);
+    background: #20b858;
     transform: translateY(-1px)
 }
 
@@ -271,25 +275,27 @@ nav {
     color: var(--v)
 }
 
+/* ── BOTONES ── */
+/* BP: CTA principal unificado — verde WhatsApp */
 .bp {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: .6rem;
-    background: var(--v);
+    background: var(--wa);
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1.1rem 2.2rem;
     border-radius: .875rem;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 800;
-    box-shadow: 0 8px 28px rgba(124, 58, 237, .32);
+    box-shadow: 0 8px 28px rgba(37, 211, 102, .35);
     transition: background .2s, transform .2s, box-shadow .2s
 }
 
 .bp:hover {
-    background: var(--vd);
+    background: #20b858;
     transform: translateY(-2px);
-    box-shadow: 0 12px 36px rgba(124, 58, 237, .45)
+    box-shadow: 0 12px 36px rgba(37, 211, 102, .45)
 }
 
 .bs {
@@ -302,7 +308,7 @@ nav {
     border: 1.5px solid var(--s200);
     padding: 1rem 2rem;
     border-radius: .875rem;
-    font-size: 1rem;
+    font-size: .95rem;
     font-weight: 700;
     transition: background .2s, border-color .2s
 }
@@ -332,18 +338,18 @@ nav {
 .bf {
     display: block;
     text-align: center;
-    padding: 1rem;
+    padding: 1.1rem;
     border-radius: .875rem;
-    background: var(--v);
+    background: var(--wa);
     color: #fff;
     font-weight: 800;
     font-size: .95rem;
-    box-shadow: 0 8px 28px rgba(124, 58, 237, .35);
+    box-shadow: 0 8px 28px rgba(37, 211, 102, .35);
     transition: background .2s, transform .2s
 }
 
 .bf:hover {
-    background: var(--vd);
+    background: #20b858;
     transform: translateY(-2px)
 }
 
@@ -394,6 +400,7 @@ nav {
     flex-shrink: 0
 }
 
+/* ── HERO ── */
 .hero {
     padding: 4rem 0 6rem;
     position: relative;
@@ -519,11 +526,27 @@ h1 em {
     font-size: 1.2rem
 }
 
+/* Hero CTA: solo 1 principal + 1 link-style secundario */
 .hctas {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 1.5rem
+    margin-bottom: 1.5rem;
+    align-items: center
+}
+
+.hctas-sec {
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--s500);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    transition: color .2s
+}
+
+.hctas-sec:hover {
+    color: var(--v)
 }
 
 .htr {
@@ -1384,6 +1407,48 @@ h1 em {
     margin-top: .15rem
 }
 
+/* ── SECCIÓN TESTIMONIOS (placeholder para futuro) ── */
+.testi-placeholder {
+    background: var(--s50);
+    border: 2px dashed var(--s200);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    color: var(--s400);
+    font-size: .9rem;
+    font-weight: 600
+}
+
+/* ── SECCIÓN SOCIAL PROOF / CONFIANZA ── */
+.trust-strip {
+    background: #fff;
+    padding: 3rem 0;
+    border-top: 1px solid var(--s200)
+}
+
+.trust-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 3rem;
+    align-items: center
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--s700)
+}
+
+.trust-item .ms {
+    color: var(--g);
+    font-size: 1.2rem
+}
+
+/* ── QUIEN SOY ── */
 .ac {
     max-width: 640px;
     margin: 0 auto;
@@ -1559,6 +1624,7 @@ h1 em {
     font-size: .9rem
 }
 
+/* ── PRICING ── */
 .prgd {
     display: grid;
     gap: 2rem;
@@ -1797,6 +1863,7 @@ h1 em {
     line-height: 1.6
 }
 
+/* ── FAQ ── */
 .flist {
     display: flex;
     flex-direction: column;
@@ -1862,6 +1929,7 @@ h1 em {
     max-height: 200px
 }
 
+/* ── CONTACTO ── */
 #contacto {
     background: var(--k);
     padding: 5rem 0
@@ -2005,28 +2073,29 @@ h1 em {
     height: 110px
 }
 
+/* Submit button: verde WhatsApp para máxima conversión */
 .bsub {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .6rem;
-    background: var(--v);
+    background: var(--wa);
     color: #fff;
     padding: 1.1rem;
     border-radius: 1rem;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 800;
     border: none;
     cursor: pointer;
-    box-shadow: 0 8px 28px rgba(124, 58, 237, .32);
+    box-shadow: 0 8px 28px rgba(37, 211, 102, .32);
     transition: background .2s, transform .2s;
     margin-top: .5rem;
     font-family: inherit
 }
 
 .bsub:hover {
-    background: var(--vd);
+    background: #20b858;
     transform: translateY(-2px)
 }
 
@@ -2050,6 +2119,7 @@ h1 em {
     font-size: .95rem
 }
 
+/* ── FINAL CTA ── */
 .fcta {
     background: var(--v);
     padding: 5rem 0;
@@ -2073,6 +2143,7 @@ h1 em {
     line-height: 1.65
 }
 
+/* ── FOOTER ── */
 footer {
     background: var(--k);
     color: #94a3b8;
@@ -2150,6 +2221,7 @@ footer {
     }
 }
 
+/* ── STICKY CTA MOBILE: mejorado ── */
 .sticky-cta {
     display: none;
     position: fixed;
@@ -2160,12 +2232,19 @@ footer {
     background: var(--wa);
     color: #fff;
     text-align: center;
-    padding: 1.25rem 1rem;
-    font-size: 1.1rem;
+    padding: 1.1rem 1rem;
+    font-size: 1rem;
     font-weight: 900;
-    box-shadow: 0 -8px 32px rgba(37, 211, 102, .3);
+    box-shadow: 0 -8px 32px rgba(37, 211, 102, .4);
     text-decoration: none;
     transition: background .2s;
+    /* Pulso sutil para llamar atención */
+    animation: sticky-pulse 3s ease-in-out infinite;
+}
+
+@keyframes sticky-pulse {
+    0%, 100% { box-shadow: 0 -8px 32px rgba(37, 211, 102, .4); }
+    50% { box-shadow: 0 -8px 48px rgba(37, 211, 102, .65); }
 }
 
 .sticky-cta:hover {
@@ -2180,8 +2259,12 @@ footer {
     .wa-b {
         display: none;
     }
-}
 
+    /* Espacio para que el sticky no tape contenido */
+    body {
+        padding-bottom: 58px;
+    }
+}
 
 @media (min-width: 768px) {
     .sticky-cta {
@@ -2189,17 +2272,14 @@ footer {
     }
 }
 
-/* ── Mobile hero fixes (max 768px) ─────────────────────────── */
+/* ── Mobile hero fixes ── */
 @media (max-width: 768px) {
-
-    /* 2. Hero image: keep 16/9 but enforce a taller minimum */
     .hiw {
         aspect-ratio: 16 / 9;
         min-height: 220px;
         border-radius: 1.25rem;
     }
 
-    /* 3. Overlay: anchored bottom-left with inset — asymmetric and premium */
     .hcc {
         bottom: -1.25rem;
         left: 1rem;
@@ -2212,8 +2292,23 @@ footer {
         backdrop-filter: blur(10px);
     }
 
-    /* room for the overlay below the image */
     .hv {
         padding-bottom: 2.75rem;
     }
+}
+
+/* ── Mid-page CTA strip: visible en toda la página ── */
+.mid-cta {
+    background: var(--s50);
+    border-top: 1px solid var(--s200);
+    border-bottom: 1px solid var(--s200);
+    padding: 2.5rem 0;
+    text-align: center
+}
+
+.mid-cta p {
+    font-size: .95rem;
+    color: var(--s600);
+    font-weight: 600;
+    margin-bottom: 1rem
 }
