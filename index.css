@@ -1,4 +1,3 @@
-
 :root {
     --v: #7c3aed;
     --vl: #8b5cf6;
@@ -526,6 +525,13 @@ h1 em {
     font-size: 1.2rem
 }
 
+/* Ocultar algunos bullets en el hero de mobile para acortarlo */
+@media (max-width: 767px) {
+    .hcl li:nth-child(n+4) {
+        display: none;
+    }
+}
+
 /* Hero CTA: solo 1 principal + 1 link-style secundario */
 .hctas {
     display: flex;
@@ -547,6 +553,13 @@ h1 em {
 
 .hctas-sec:hover {
     color: var(--v)
+}
+
+/* Ocultar el enlace secundario en mobile para no dividir la atención */
+@media (max-width: 767px) {
+    .hctas-sec {
+        display: none;
+    }
 }
 
 .htr {
@@ -2221,7 +2234,7 @@ footer {
     }
 }
 
-/* ── STICKY CTA MOBILE: mejorado ── */
+/* ── STICKY CTA MOBILE: mejorado con opacidad/scroll ── */
 .sticky-cta {
     display: none;
     position: fixed;
@@ -2232,19 +2245,37 @@ footer {
     background: var(--wa);
     color: #fff;
     text-align: center;
-    padding: 1.1rem 1rem;
-    font-size: 1rem;
+    padding: 1rem;
+    /* Ajustado para hacerlo más fino */
+    font-size: 0.95rem;
+    /* Letra un poco más chica */
     font-weight: 900;
     box-shadow: 0 -8px 32px rgba(37, 211, 102, .4);
     text-decoration: none;
-    transition: background .2s;
-    /* Pulso sutil para llamar atención */
-    animation: sticky-pulse 3s ease-in-out infinite;
+    /* Efecto de scroll y cambio de color */
+    transition: background .2s, opacity 0.3s ease;
+    animation: sticky-pulse 3s ease-in-out 2;
+    /* Oculto por defecto hasta hacer scroll */
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Esta clase se activa vía JS al scrollear */
+.sticky-cta.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 @keyframes sticky-pulse {
-    0%, 100% { box-shadow: 0 -8px 32px rgba(37, 211, 102, .4); }
-    50% { box-shadow: 0 -8px 48px rgba(37, 211, 102, .65); }
+
+    0%,
+    100% {
+        box-shadow: 0 -8px 32px rgba(37, 211, 102, .4);
+    }
+
+    50% {
+        box-shadow: 0 -8px 48px rgba(37, 211, 102, .65);
+    }
 }
 
 .sticky-cta:hover {
@@ -2253,7 +2284,10 @@ footer {
 
 @media (max-width: 767px) {
     .sticky-cta {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.25rem 1rem calc(1.25rem + env(safe-area-inset-bottom));
     }
 
     .wa-b {
@@ -2262,7 +2296,7 @@ footer {
 
     /* Espacio para que el sticky no tape contenido */
     body {
-        padding-bottom: 58px;
+        padding-bottom: calc(90px + env(safe-area-inset-bottom));
     }
 }
 
