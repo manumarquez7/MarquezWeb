@@ -22,11 +22,17 @@
 *::after {
     box-sizing: border-box;
     margin: 0;
-    padding: 0
+    padding: 0;
+    max-width: 100%;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 html {
-    font-size: 16px
+    font-size: 16px;
 }
 
 body {
@@ -34,12 +40,12 @@ body {
     background: #fff;
     color: var(--k);
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden
 }
 
 img {
     display: block;
-    max-width: 100%
+    max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -50,19 +56,19 @@ a {
 .c {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem
+    padding: 0 1.25rem;
 }
 
 .csm {
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 1.5rem
+    padding: 0 1.25rem;
 }
 
 .cxs {
     max-width: 680px;
     margin: 0 auto;
-    padding: 0 1.5rem
+    padding: 0 1.25rem;
 }
 
 section {
@@ -2312,10 +2318,18 @@ footer {
 
 /* ── Mobile hero fixes ── */
 @media (max-width: 768px) {
+    /* Forzar botón principal en mobile (sin exceder ancho) */
+    .bp {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .hiw {
         aspect-ratio: 16 / 9;
         min-height: 220px;
         border-radius: 1.25rem;
+        /* Evitar overflow horizontal de la imagen o video */
+        overflow: hidden;
     }
 
     .hcc {
