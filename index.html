@@ -51,6 +51,20 @@
 
     <link rel="preload" href="index.css" as="style">
     <link rel="stylesheet" href="index.css">
+
+    <style>
+        /* ── CRO Mobile Optimizations ── */
+        @media (max-width: 768px) {
+
+            /* Simplificar navbar en mobile: ocultar menú y hamburguesa */
+            #hb,
+            #mm {
+                display: none !important;
+            }
+
+        }
+    </style>
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -69,39 +83,19 @@
 
 <body>
 
-    <!-- WhatsApp bubble — desktop -->
-    <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20servicio."
-        target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" class="wa-b">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-            <path
-                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-        </svg>
-    </a>
-
     <!-- ── NAV: simplificado — logo + único CTA ── -->
-    <!-- CRO: eliminados los links de navegación, solo el CTA principal arriba -->
     <nav aria-label="Navegación principal">
         <div class="c ni">
             <a href="#" class="logo" aria-label="MarquezWeb - Inicio"
                 style="font-weight:800;font-size:1.4rem;letter-spacing:-0.03em;">Marquez<span
                     style="color:var(--v)">Web</span></a>
-            <!-- Links visibles solo en desktop — no distraen en mobile -->
+            <!-- Links visibles solo en desktop -->
             <div class="nl">
                 <a href="#portfolio">Ver mis diseños</a>
                 <a href="#pricing">Precios</a>
                 <a href="#faq">FAQ</a>
             </div>
-            <div style="display:flex;align-items:center;gap:.75rem">
-                <!-- CRO: CTA nav cambiado a verde WhatsApp y texto orientado a acción -->
-                <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20servicio."
-                    target="_blank" rel="noopener noreferrer" class="nc">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="16"
-                        height="16" aria-hidden="true" style="flex-shrink:0">
-                        <path
-                            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-                    </svg>
-                    Escribime por WhatsApp
-                </a>
+            <div style="display:flex;align-items:center;">
                 <button class="hb" id="hb" aria-label="Abrir menú" aria-expanded="false" aria-controls="mm">
                     <span></span><span></span><span></span>
                 </button>
@@ -111,26 +105,20 @@
             <a href="#portfolio">Ver mis diseños</a>
             <a href="#pricing">Precios</a>
             <a href="#faq">FAQ</a>
-            <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20servicio."
-                target="_blank" rel="noopener noreferrer" style="color:var(--wa);font-weight:900">📲 Escribime por
-                WhatsApp</a>
         </div>
     </nav>
 
     <!-- ── HERO ── -->
-    <!-- CRO: 1 solo CTA principal (verde WhatsApp) + secundario como link de texto -->
     <section class="hero" style="background:#fff">
         <div class="c">
             <div class="hg">
                 <div>
                     <div class="hbadge"><span class="pd" aria-hidden="true"></span>SOLO 3 LUGARES DISPONIBLES ESTE MES
                     </div>
-                    <!-- CRO: headline más directo — pasa el test de 5 segundos -->
                     <h1>Tu página web profesional en 7 días — estructurada para generarte consultas por WhatsApp
                     </h1>
-                    <!-- CRO: subtítulo con para quién + promesa concreta -->
-                    <p class="hsub">Para profesionales que quieren dejar de depender de Instagram y empezar a
-                        recibir consultas todos los días, estén donde estén.</p>
+                    <p class="hsub">Para profesionales que quieren dejar de depender de Instagram y empezar a recibir
+                        consultas todos los días, estén donde estén.</p>
                     <ul class="hcl">
                         <li><span class="material-symbols-outlined ms" aria-hidden="true">check_circle</span>Diseño 100%
                             personalizado para tu servicio</li>
@@ -139,18 +127,16 @@
                         <li><span class="material-symbols-outlined ms" aria-hidden="true">check_circle</span>Un canal
                             directo y sin fricciones hacia tu WhatsApp</li>
                     </ul>
-                    <!-- CRO: 1 CTA principal + link secundario — sin dos botones iguales -->
                     <div class="hctas">
-                        <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20servicio."
+                        <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web.%0ASoy%20%5Bprofesi%C3%B3n%5D%20y%20quiero%20una%20landing%20para%20conseguir%20m%C3%A1s%20consultas%20por%20WhatsApp.%0A%0A%C2%BFPod%C3%A9s%20contarme%20c%C3%B3mo%20trabaj%C3%A1s%3F"
                             target="_blank" rel="noopener noreferrer" class="bp">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="20"
                                 height="20" aria-hidden="true">
                                 <path
                                     d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
                             </svg>
-                            Quiero empezar mi landing
+                            Hablar con Manuel por WhatsApp
                         </a>
-                        <!-- CRO: secundario como link de texto, no compite visualmente -->
                         <a href="#portfolio" class="hctas-sec">Ver ejemplos de diseño ↓</a>
                     </div>
                     <p style="font-size:.8rem;color:var(--s400);margin-top:.5rem">Sin compromiso. Te respondo yo
@@ -184,7 +170,7 @@
         </div>
     </section>
 
-    <!-- ── TRUST STRIP: señales concretas y honestas ── -->
+    <!-- ── TRUST STRIP ── -->
     <div class="trust-strip">
         <div class="c">
             <div class="trust-inner">
@@ -202,7 +188,7 @@
         </div>
     </div>
 
-    <!-- Trust bar: tipos de profesionales -->
+    <!-- Trust bar -->
     <section class="tbar" style="padding:2.5rem 0" aria-label="Tipos de profesionales">
         <div class="c">
             <p class="tbl">Ideal para estos profesionales</p>
@@ -330,22 +316,6 @@
         </div>
     </section>
 
-    <!-- ── MID-PAGE CTA — visibilidad en toda la página ── -->
-    <div class="mid-cta">
-        <div class="c">
-            <p>Si esto te sirve, podés empezar hoy mismo.</p>
-            <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20servicio."
-                target="_blank" rel="noopener noreferrer" class="bp" style="margin:0 auto">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="18" height="18"
-                    aria-hidden="true">
-                    <path
-                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-                </svg>
-                Hablemos sobre tu proyecto
-            </a>
-        </div>
-    </div>
-
     <!-- BENEFITS -->
     <section class="bg-s bt" id="benefits">
         <div class="c">
@@ -378,7 +348,8 @@
                 <div class="bc">
                     <div class="bci" aria-hidden="true"><span class="material-symbols-outlined ms">timer</span></div>
                     <h3>Explica tu servicio sin que tengas que hacerlo vos</h3>
-                    <p>Tu página responde las dudas frecuentes y deja claro por qué elegirte. Ahorrá tiempo en explicar lo mismo en cada mensaje.</p>
+                    <p>Tu página responde las dudas frecuentes y deja claro por qué elegirte. Ahorrá tiempo en explicar
+                        lo mismo en cada mensaje.</p>
                 </div>
             </div>
         </div>
@@ -432,7 +403,6 @@
                 <p class="sub">Cada proyecto fue diseñado para resolver un problema de negocio específico — no solo para
                     verse bien.</p>
             </div>
-            <!-- Nota de transparencia sobre dominios -->
             <p
                 style="text-align:center;font-size:.82rem;color:var(--s400);font-weight:500;margin:0 auto 2.5rem;max-width:560px;">
                 <span class="material-symbols-outlined ms" aria-hidden="true"
@@ -525,7 +495,7 @@
                 </a>
             </div>
 
-            <!-- ── SOCIAL PROOF: Cómo trabajo (alternativa honesta a testimonios) ── -->
+            <!-- ── SOCIAL PROOF ── -->
             <div style="max-width:900px;margin:4rem auto 0">
                 <p
                     style="font-size:.8rem;font-weight:700;color:var(--s400);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.5rem;text-align:center">
@@ -565,64 +535,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- ── TESTIMONIOS: placeholder inteligente ──
-            <div style="max-width:900px;margin:4rem auto 0">
-                <p
-                    style="font-size:.8rem;font-weight:700;color:var(--s400);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.5rem;text-align:center">
-                    Lo que dicen mis clientes</p>
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem">
-                    <div
-                        style="background:#fff;border:1px solid var(--s100);border-radius:1.25rem;padding:1.5rem;position:relative;opacity:.9">
-                        <p
-                            style="font-size:.9rem;color:var(--s600);font-style:italic;line-height:1.6;margin-bottom:1rem">
-                            &ldquo;En menos de una semana ya tenía mi página activa. Empecé a recibir consultas por
-                            WhatsApp antes de lo que esperaba.&rdquo;</p>
-                        <div style="display:flex;align-items:center;gap:.75rem">
-                            <div
-                                style="width:36px;height:36px;border-radius:50%;background:var(--s100);display:flex;align-items:center;justify-content:center">
-                                <span class="material-symbols-outlined ms" aria-hidden="true"
-                                    style="font-size:1.1rem;color:var(--s400)">person</span>
-                            </div>
-                            <div>
-                                <strong style="font-size:.85rem;display:block">Profesional de salud</strong>
-                                <span style="font-size:.75rem;color:var(--s400)">Córdoba, Argentina</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        style="background:#fff;border:1px solid var(--s100);border-radius:1.25rem;padding:1.5rem;position:relative;opacity:.9">
-                        <p
-                            style="font-size:.9rem;color:var(--s600);font-style:italic;line-height:1.6;margin-bottom:1rem">
-                            &ldquo;Dejé de depender solo de Instagram. Ahora tengo una página que puedo compartir y que
-                            realmente me representa.&rdquo;</p>
-                        <div style="display:flex;align-items:center;gap:.75rem">
-                            <div
-                                style="width:36px;height:36px;border-radius:50%;background:var(--s100);display:flex;align-items:center;justify-content:center">
-                                <span class="material-symbols-outlined ms" aria-hidden="true"
-                                    style="font-size:1.1rem;color:var(--s400)">person</span>
-                            </div>
-                            <div>
-                                <strong style="font-size:.85rem;display:block">Negocio local</strong>
-                                <span style="font-size:.75rem;color:var(--s400)">Córdoba, Argentina</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        style="background:var(--s50);border:1px dashed var(--s200);border-radius:1.25rem;padding:1.5rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:.75rem">
-                        <span class="material-symbols-outlined ms" aria-hidden="true"
-                            style="font-size:2rem;color:var(--s300)">rate_review</span>
-                        <p style="font-size:.85rem;font-weight:600;color:var(--s500);margin:0">Próximamente: nuevas
-                            historias publicadas</p>
-                        <p style="font-size:.78rem;color:var(--s400);margin:0">Mis clientes actuales están comenzando a
-                            recibir sus consultas por la web. ¿Querés ver los resultados en vivo y cómo trabajamos hoy?
-                            <a href="https://wa.me/5492964510033" target="_blank" rel="noopener noreferrer"
-                                style="color:var(--v);text-decoration:underline;font-weight:600">Escribime y te
-                                cuento.</a></p>
-                    </div>
-                </div>
-            </div>
-            -->
         </div>
     </section>
 
@@ -876,8 +788,8 @@
                                 gratuito incluido</li>
                         </ul>
                     </div>
-                    <!-- CRO: texto del botón orientado a acción directa -->
-                    <a href="#contacto" class="bo">Consultar por el plan Starter</a>
+                    <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20quiero%20consultar%20por%20el%20plan%20Starter."
+                        target="_blank" rel="noopener noreferrer" class="bo">Consultar por el plan Starter</a>
                 </div>
                 <div class="prcard feat">
                     <div class="pbadge">Recomendado</div>
@@ -905,8 +817,8 @@
                                     aria-hidden="true">check_circle</span>Configuración de dominio incluida</li>
                         </ul>
                     </div>
-                    <!-- CRO: botón verde en el plan recomendado -->
-                    <a href="#contacto" class="bf">Consultar por el plan Profesional</a>
+                    <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20quiero%20consultar%20por%20el%20plan%20Profesional."
+                        target="_blank" rel="noopener noreferrer" class="bf">Consultar por el plan Profesional</a>
                 </div>
             </div>
             <div class="cbox">
@@ -915,7 +827,8 @@
                     <h4>¿Tu caso es diferente?</h4>
                     <p>Si necesitás algo más específico — varias páginas, integraciones o estructura distinta — preparo
                         una propuesta personalizada.</p>
-                    <a href="#contacto" class="bsm"><span class="material-symbols-outlined ms"
+                    <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20necesito%20una%20propuesta%20personalizada."
+                        target="_blank" rel="noopener noreferrer" class="bsm"><span class="material-symbols-outlined ms"
                             aria-hidden="true">send</span>Solicitar propuesta</a>
                 </div>
             </div>
@@ -1006,81 +919,25 @@
         </div>
     </section>
 
-    <!-- ── CONTACTO ── -->
-    <!-- CRO: microcopy mejorado — más orientado a la acción del usuario -->
-    <section id="contacto">
-        <div class="c">
-            <div class="cw">
-                <div class="cl2">
-                    <!-- CRO: headline más urgente -->
-                    <h2>Contame sobre tu proyecto — trabajo con cupos muy limitados</h2>
-                    <p>Contame qué hacés y qué tipo de clientes querés atraer. Te respondo personalmente <strong
-                            style="color:#fff">en menos de 24 horas</strong>.</p>
-                    <div class="cperks">
-                        <div class="cperk">
-                            <div class="pic2" aria-hidden="true"><span class="material-symbols-outlined ms">check</span>
-                            </div>
-                            <span>Respuesta personal y rápida</span>
-                        </div>
-                        <div class="cperk">
-                            <div class="pic2" aria-hidden="true"><span class="material-symbols-outlined ms">check</span>
-                            </div>
-                            <span>Diseño 100% a medida</span>
-                        </div>
-                        <div class="cperk">
-                            <div class="pic2" aria-hidden="true"><span class="material-symbols-outlined ms">check</span>
-                            </div>
-                            <span>Sin compromiso ni pago por adelantado</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cr">
-                    <form id="contactForm" novalidate>
-                        <div class="fg2">
-                            <label class="fl2" for="nC">Tu nombre</label>
-                            <input class="fi2" id="nC" name="nombre" type="text" placeholder="Ej: Juan Pérez" required
-                                autocomplete="name">
-                        </div>
-                        <div class="fg2">
-                            <!-- CRO: label más conversacional -->
-                            <label class="fl2" for="profC">¿A qué te dedicás?</label>
-                            <input class="fi2" id="profC" name="profesion" type="text"
-                                placeholder="Ej: Médico clínico, Abogada laboral..." required>
-                        </div>
-                        <!-- CRO: botón del formulario con ícono WhatsApp para claridad -->
-                        <button type="submit" class="bsub">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="20"
-                                height="20" aria-hidden="true">
-                                <path
-                                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-                            </svg>
-                            Enviar y hablar por WhatsApp
-                        </button>
-                        <!-- CRO: microcopy más tranquilizador -->
-                        <p class="fnote">
-                            <span class="material-symbols-outlined ms" aria-hidden="true">lock</span>
-                            Sin spam. Solo te escribo yo, Manuel, personalmente.
-                        </p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="fcta">
-        <div class="cxs">
-            <h2>¿Preferís escribir directo?</h2>
-            <p>Si ya sabés lo que querés, podemos arrancar hoy mismo.</p>
-            <a href="https://wa.me/5492964510033?text=Hola%20Manuel%2C%20quiero%20empezar%20a%20recibir%20consultas%20desde%20mi%20web.%20%C2%BFMe%20contás%20cómo%20sería%20mi%20página%3F"
-                target="_blank" rel="noopener noreferrer" class="bwa" aria-label="Hablar con Manuel por WhatsApp"
-                style="margin-top:1rem;">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+    <!-- ── CTA FINAL (Reemplazo del formulario para máxima conversión) ── -->
+    <section id="contacto" style="background:#fff;padding:6rem 0;text-align:center" class="bt">
+        <div class="c" style="max-width:600px;">
+            <span class="tag">Demos el primer paso</span>
+            <h2 style="margin-bottom:1.5rem">Contame sobre tu proyecto</h2>
+            <p style="font-size:1.1rem;color:var(--s600);margin-bottom:2.5rem;line-height:1.6">
+                Trabajo con cupos limitados. Escribime directo a mi WhatsApp personal contándome qué hacés y qué tipo de
+                clientes querés atraer. <strong>Te respondo en menos de 24 horas.</strong>
+            </p>
+            <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web.%0ASoy%20%5Bprofesi%C3%B3n%5D%20y%20quiero%20una%20landing%20para%20conseguir%20m%C3%A1s%20consultas%20por%20WhatsApp.%0A%0A%C2%BFPod%C3%A9s%20contarme%20c%C3%B3mo%20trabaj%C3%A1s%3F"
+                target="_blank" rel="noopener noreferrer" class="bp" style="margin:0 auto">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="20" height="20"
+                    aria-hidden="true">
                     <path
                         d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
                 </svg>
-                Hablar por WhatsApp ahora
+                Hablar con Manuel por WhatsApp
             </a>
+            <p style="font-size:0.85rem;color:var(--s400);margin-top:1.25rem;">Trato directo y sin compromiso.</p>
         </div>
     </section>
 
@@ -1112,11 +969,10 @@
         </div>
     </footer>
 
-    <!-- ── STICKY MOBILE CTA: mejorado ── -->
-    <!-- CRO: texto con emoji para captar atención en mobile -->
-    <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20servicio."
+    <!-- ── STICKY MOBILE CTA ── -->
+    <a href="https://wa.me/5492964510033?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web.%0ASoy%20%5Bprofesi%C3%B3n%5D%20y%20quiero%20una%20landing%20para%20conseguir%20m%C3%A1s%20consultas%20por%20WhatsApp.%0A%0A%C2%BFPod%C3%A9s%20contarme%20c%C3%B3mo%20trabaj%C3%A1s%3F"
         target="_blank" rel="noopener noreferrer" class="sticky-cta">
-        📲 Escribime ahora por WhatsApp
+        📲 Hablar con Manuel por WhatsApp
     </a>
 
     <script>
@@ -1153,16 +1009,18 @@
                 }
             });
         });
+    </script>
 
-        // Formulario → WhatsApp
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const n = document.getElementById('nC').value.trim();
-            const prof = document.getElementById('profC').value.trim();
-            if (!n || !prof) return;
-            const txt = `Hola Manuel, soy ${n}.\n\nSoy ${prof} y quiero consultar por una landing page para mi servicio.`;
-            const waUrl = `https://wa.me/5492964510033?text=${encodeURIComponent(txt)}`;
-            window.open(waUrl, '_blank');
+    <script>
+        window.addEventListener('scroll', () => {
+            const cta = document.querySelector('.sticky-cta');
+            if (cta) {
+                if (window.scrollY > 400) {
+                    cta.classList.add('visible');
+                } else {
+                    cta.classList.remove('visible');
+                }
+            }
         });
     </script>
 
