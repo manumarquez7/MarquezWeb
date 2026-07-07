@@ -1200,6 +1200,51 @@ h1 em {
     background: var(--v)
 }
 
+/* ── Insignias de estado de proyecto ── */
+.proj-badge {
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .28rem .65rem;
+    border-radius: 99px;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    pointer-events: none;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px)
+}
+
+.proj-badge-live {
+    background: rgba(16, 185, 129, .15);
+    border: 1px solid rgba(16, 185, 129, .35);
+    color: #065f46
+}
+
+.proj-badge-live .proj-badge-dot {
+    width: .45rem;
+    height: .45rem;
+    border-radius: 50%;
+    background: #10b981;
+    flex-shrink: 0;
+    animation: proj-badge-pulse 2s ease-in-out infinite
+}
+
+@keyframes proj-badge-pulse {
+    0%, 100% { opacity: 1; transform: scale(1) }
+    50%       { opacity: .5; transform: scale(.7) }
+}
+
+.proj-badge-demo {
+    background: rgba(0, 0, 0, .28);
+    border: 1px solid rgba(255, 255, 255, .18);
+    color: rgba(255, 255, 255, .88)
+}
+
 .prg {
     display: grid;
     gap: 2.5rem;
