@@ -2542,24 +2542,9 @@ footer {
 .feat-proj-actions {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-}
-
-.feat-tech-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tech-pill {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: #e2e8f0;
-    font-size: 0.78rem;
-    font-weight: 700;
-    padding: 0.3rem 0.75rem;
-    border-radius: 9999px;
-    letter-spacing: 0.02em;
+    justify-content: center;
+    gap: 0.875rem;
+    align-self: stretch;
 }
 
 .btn-feat {
@@ -2575,13 +2560,7 @@ footer {
     font-weight: 800;
     transition: background 0.2s, color 0.2s;
     text-decoration: none;
-    align-self: flex-start;
-}
-
-@media (max-width: 767px) {
-    .btn-feat {
-        width: 100%;
-    }
+    width: 100%;
 }
 
 .btn-feat:hover {
@@ -2590,6 +2569,32 @@ footer {
 }
 
 .btn-feat .ms {
+    font-size: 1rem;
+}
+
+.btn-feat-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: calc(0.9rem - 1px) 1.8rem;
+    border-radius: 0.875rem;
+    font-size: 0.95rem;
+    font-weight: 800;
+    transition: background 0.2s, border-color 0.2s;
+    text-decoration: none;
+    width: 100%;
+}
+
+.btn-feat-outline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-feat-outline .ms {
     font-size: 1rem;
 }
 
@@ -2693,9 +2698,6 @@ footer {
         padding: 1.5rem 1.25rem;
         border-radius: 1.25rem;
         margin-bottom: 2.5rem;
-    }
-    .btn-feat {
-        width: 100%;
     }
     .feat-dev-grid {
         grid-template-columns: 1fr 1fr;
