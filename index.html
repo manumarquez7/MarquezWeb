@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="es-AR">
+<head>
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W598GFZP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#111317"/>
+<title>MarquezWeb — Landing pages para profesionales</title>
+<meta name="description" content="Diseño páginas web y landing pages para profesionales que quieren más consultas por WhatsApp. Hecho en Argentina."/>
+<meta name="author" content="Manuel Marquez"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://marquezweb.com.ar/"/>
+<meta name="google-site-verification" content="nrleQTALXnvZ7WINoC7LITr3DR5ifTGUpG828mx-s1M"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="MarquezWeb"/>
+<meta property="og:locale" content="es_AR"/>
+<meta property="og:url" content="https://marquezweb.com.ar/"/>
+<meta property="og:title" content="MarquezWeb — Landing pages para profesionales"/>
+<meta property="og:description" content="Diseño páginas web y landing pages para profesionales que quieren más consultas por WhatsApp. Hecho en Argentina."/>
+<meta property="og:image" content="https://marquezweb.com.ar/og-image.webp"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="MarquezWeb — Landing pages para profesionales"/>
+<meta name="twitter:description" content="Diseño páginas web y landing pages para profesionales que quieren más consultas por WhatsApp. Hecho en Argentina."/>
+<meta name="twitter:image" content="https://marquezweb.com.ar/og-image.webp"/>
+
+<link rel="icon" href="logo.png"/>
+<link rel="apple-touch-icon" href="logo.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="output.css"/>
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #9d4edd, #7b2cbf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ── Scroll reveal (fast & soft) ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-d1 { transition-delay: 0.04s; }
+  .reveal-d2 { transition-delay: 0.08s; }
+  .reveal-d3 { transition-delay: 0.12s; }
+  .reveal-d4 { transition-delay: 0.16s; }
+
+  /* ── Hero load-in ── */
+  .hero-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: hero-fade 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .hero-in-d1 { animation-delay: 0.06s; }
+  .hero-in-d2 { animation-delay: 0.12s; }
+  .hero-in-d3 { animation-delay: 0.18s; }
+  .hero-in-d4 { animation-delay: 0.24s; }
+  .hero-in-d5 { animation-delay: 0.3s; }
+  .hero-visual-in {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+    animation: hero-visual 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  }
+  @keyframes hero-fade {
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes hero-visual {
+    to { opacity: 1; transform: none; }
+  }
+
+  /* ── Hero image: premium hover ── */
+  .hero-frame {
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.4s ease;
+    will-change: transform;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hero-frame:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 28px 56px rgba(0, 0, 0, 0.42),
+        0 0 36px rgba(157, 78, 221, 0.14);
+    }
+    .hero-frame:hover img {
+      transform: scale(1.025);
+    }
+  }
+  .hero-frame img {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-origin: center center;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary-motion {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.25s ease,
+      background-color 0.2s ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn-primary-motion:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 28px rgba(157, 78, 221, 0.35);
+    }
+  }
+  .btn-primary-motion:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .btn-wa-motion {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.25s ease,
+      background-color 0.2s ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn-wa-motion:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
+    }
+  }
+  .btn-wa-motion:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .glow-violet-hover {
+    transition: box-shadow 0.25s ease, transform 0.2s ease, background-color 0.2s ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .glow-violet-hover:hover {
+      box-shadow: 0 0 26px rgba(157, 78, 221, 0.3);
+    }
+  }
+
+  /* ── Cards ── */
+  .card-lift {
+    transition:
+      transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.28s ease,
+      border-color 0.28s ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .card-lift:hover {
+      transform: translateY(-7px);
+      border-color: rgba(157, 78, 221, 0.28);
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.28),
+        0 0 20px rgba(157, 78, 221, 0.1);
+    }
+  }
+
+  /* Portfolio image zoom inside cards */
+  .card-lift .group img,
+  .card-lift img.object-cover {
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .card-lift:hover img.object-cover,
+    .card-lift.group:hover img {
+      transform: scale(1.03);
+    }
+  }
+
+  /* ── Nav links ── */
+  nav a {
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  /* ── WhatsApp FAB ── */
+  .fab-wa {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fab-attention 6s ease-in-out 3s 2;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .fab-wa:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
+      animation: none;
+    }
+  }
+  .fab-wa:active {
+    transform: scale(0.96);
+  }
+  /* Two gentle pulses after 3s, then stop — not permanent */
+  @keyframes fab-attention {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45); transform: scale(1); }
+    40% { box-shadow: 0 4px 28px rgba(37, 211, 102, 0.6); transform: scale(1.05); }
+    55% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45); transform: scale(1); }
+  }
+
+  /* ── Icon micro-nudge on card hover ── */
+  .icon-nudge {
+    transition: transform 0.25s ease;
+    display: inline-block;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .card-lift:hover .icon-nudge {
+      transform: scale(1.08) translateY(-1px);
+    }
+  }
+
+  /* ── Nav links: animated underline ── */
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #9d4edd;
+    transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  }
+
+  /* ── Step circles (how clients arrive) ── */
+  .step-hover {
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .step-circle {
+    transition: border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .step-hover:hover {
+      transform: translateY(-6px);
+    }
+    .step-hover:hover .step-circle {
+      border-color: rgba(157, 78, 221, 0.7);
+      color: #c0a3ff;
+      box-shadow: 0 0 22px rgba(157, 78, 221, 0.3);
+    }
+  }
+
+  /* ── Logo micro-scale ── */
+  .logo-hover {
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .logo-hover:hover {
+      transform: scale(1.06) rotate(-2deg);
+    }
+  }
+
+  /* ── FAQ ── */
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.32s ease, opacity 0.28s ease, padding 0.28s ease;
+  }
+  .faq-item.open .faq-a {
+    max-height: 16rem;
+    opacity: 1;
+    padding-bottom: 1.25rem;
+  }
+  .faq-icon {
+    transition: transform 0.28s ease;
+  }
+  .faq-item.open .faq-icon {
+    transform: rotate(180deg);
+  }
+  .faq-item {
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .faq-item:hover {
+      transform: translateY(-3px);
+      border-color: rgba(157, 78, 221, 0.35);
+    }
+  }
+
+  /* ── CTA one-shot ── */
+  .cta-once {
+    animation: cta-nudge 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.9s both;
+  }
+  @keyframes cta-nudge {
+    0% { transform: translateY(0) scale(1); }
+    45% { transform: translateY(-2px) scale(1.015); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  #sticky-cta {
+    transition: opacity 0.28s ease, transform 0.28s ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .reveal,
+    .hero-in,
+    .hero-visual-in {
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+    }
+    .cta-once,
+    .fab-wa {
+      animation: none !important;
+    }
+    .hero-frame:hover,
+    .hero-frame:hover img,
+    .card-lift:hover,
+    .btn-primary-motion:hover,
+    .btn-wa-motion:hover,
+    .fab-wa:hover,
+    .card-lift:hover .icon-nudge,
+    .step-hover:hover,
+    .faq-item:hover,
+    .logo-hover:hover {
+      transform: none !important;
+    }
+    .nav-link::after {
+      transition: none !important;
+    }
+  }
+</style>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "MarquezWeb",
+    "url": "https://marquezweb.com.ar/",
+    "logo": "https://marquezweb.com.ar/logo.png",
+    "description": "Diseño páginas web y landing pages para profesionales que quieren más consultas por WhatsApp. Hecho en Argentina.",
+    "founder": { "@type": "Person", "name": "Manuel Marquez" },
+    "areaServed": "AR",
+    "serviceType": "Diseño de Landing Pages",
+    "email": "manuelmarquez2537@gmail.com"
+}
+</script>
+</head>
+<body class="bg-background text-on-surface font-body antialiased overflow-x-hidden selection:bg-primary-container selection:text-white">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W598GFZP" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Nav -->
+<header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border-subtle transition-all duration-300" id="navbar">
+  <div class="flex justify-between items-center h-20 px-5 md:px-6 max-w-container mx-auto">
+    <a href="#" class="logo-hover flex items-center gap-2.5 hover:opacity-80 transition-opacity" aria-label="MarquezWeb">
+      <img src="logo.png" alt="" class="h-10 w-10 rounded-full object-cover" width="40" height="40"/>
+      <span class="font-bold text-lg tracking-tight">Marquez<span class="text-primary">Web</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8" aria-label="Principal">
+      <a class="nav-link text-xs font-bold tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors" href="#proyectos">Proyectos</a>
+      <a class="nav-link text-xs font-bold tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors" href="#precios">Precios</a>
+      <a class="nav-link text-xs font-bold tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors" href="#faq">FAQ</a>
+      <a class="btn-primary-motion glow-violet-hover inline-flex items-center bg-primary text-white text-xs font-bold tracking-wider uppercase px-6 py-3 rounded hover:bg-primary-container shadow-[0_0_15px_rgba(157,78,221,0.25)]" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AQuiero%20cotizar%20mi%20web." target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+    </nav>
+    <button type="button" id="mobile-menu-btn" class="md:hidden text-on-surface hover:text-primary" aria-label="Abrir menú" aria-expanded="false">
+      <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-menu" class="fixed inset-0 bg-surface-container-high/95 backdrop-blur-xl z-40 hidden flex-col items-center justify-center gap-8 opacity-0 transition-opacity duration-300" aria-hidden="true">
+  <a class="mobile-link font-display text-2xl text-on-surface hover:text-primary" href="#proyectos">Proyectos</a>
+  <a class="mobile-link font-display text-2xl text-on-surface hover:text-primary" href="#precios">Precios</a>
+  <a class="mobile-link font-display text-2xl text-on-surface hover:text-primary" href="#faq">FAQ</a>
+  <a class="mt-4 bg-primary text-white text-sm font-bold tracking-wider uppercase px-8 py-4 rounded-full" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AQuiero%20cotizar%20mi%20web." target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+</div>
+
+<main class="pt-20">
+
+<!-- HERO -->
+<section class="relative flex items-center py-14 md:py-20 lg:py-24 overflow-hidden">
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="absolute top-1/4 right-0 w-[420px] h-[420px] bg-primary/10 rounded-full blur-[120px]"></div>
+  </div>
+  <div class="relative z-10 w-full max-w-container mx-auto px-5 md:px-6">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+      <!-- Copy -->
+      <div class="order-1">
+        <div class="hero-in hero-in-d1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border-subtle bg-surface-card/80 mb-7">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          <span class="text-[11px] font-medium tracking-wide text-text-muted">Solo 3 lugares disponibles este mes</span>
+        </div>
+        <h1 class="hero-in hero-in-d2 font-display text-[1.75rem] sm:text-4xl md:text-[2.75rem] leading-[1.12] text-on-surface mb-5">
+          Tus páginas web <span class="text-gradient font-bold">profesionales</span> en 5–7 días
+        </h1>
+        <p class="hero-in hero-in-d3 text-base sm:text-lg text-text-muted mb-8 max-w-xl leading-relaxed">
+          Diseñadas para presentar tu servicio, generar confianza y llevar más consultas a WhatsApp.
+        </p>
+        <div class="hero-in hero-in-d4 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+          <a class="cta-once btn-primary-motion glow-violet-hover inline-flex items-center justify-center gap-2 bg-primary text-white text-sm font-bold tracking-wider uppercase px-7 py-3.5 rounded hover:bg-primary-container transition-all shadow-[0_0_20px_rgba(157,78,221,0.3)] w-full sm:w-auto" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web.%0ASoy%20%5Bprofesi%C3%B3n%5D%20y%20quiero%20una%20landing%20para%20conseguir%20m%C3%A1s%20consultas%20por%20WhatsApp.%0A%0A%C2%BFPod%C3%A9s%20contarme%20c%C3%B3mo%20trabaj%C3%A1s%3F" target="_blank" rel="noopener noreferrer">
+            Hablar con Manuel por WhatsApp
+            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          </a>
+          <a class="group inline-flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors" href="#proyectos">
+            Ver mis proyectos
+            <span class="material-symbols-outlined group-hover:translate-y-0.5 transition-transform text-lg">arrow_downward</span>
+          </a>
+        </div>
+        <ul class="hero-in hero-in-d5 mt-10 flex flex-col gap-3 text-sm text-text-muted">
+          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">check_circle</span> Diseño 100% personalizado para tu servicio</li>
+          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">check_circle</span> Optimizada técnicamente para buscadores</li>
+          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">check_circle</span> Canal directo hacia tu WhatsApp</li>
+        </ul>
+        <p class="mt-6 text-xs text-text-muted flex flex-wrap gap-x-3 gap-y-1">
+          <span>Trato 1 a 1</span><span class="opacity-40">·</span><span>Primera versión en 5–7 días</span><span class="opacity-40">·</span><span>Sin plantillas</span>
+        </p>
+      </div>
+      <!-- Visual -->
+      <div class="order-2 relative hero-visual-in">
+        <div class="hero-frame relative rounded-xl overflow-hidden border border-border-subtle/60 shadow-[0_24px_64px_rgba(0,0,0,0.45)] bg-surface-card">
+          <img
+            src="hero-mockup.png"
+            alt="Mockup de landing page profesional en notebook, estética oscura y violeta"
+            width="1376"
+            height="768"
+            class="w-full h-auto block object-cover object-center"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="reveal py-16 md:py-28 px-5 md:px-6 max-w-container mx-auto border-t border-border-subtle relative">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent"></div>
+  <div class="grid md:grid-cols-12 gap-12 items-center">
+    <div class="md:col-span-5">
+      <span class="text-xs font-bold tracking-widest uppercase text-error-alert mb-4 block">El problema real</span>
+      <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-6 leading-tight">¿Solo usás Instagram para conseguir clientes?</h2>
+      <p class="text-lg text-text-muted leading-relaxed">
+        Instagram es útil, pero tiene un problema: cuando alguien busca tu servicio en Google, <strong class="text-on-surface">no te encuentra… y termina yendo con otro.</strong>
+      </p>
+    </div>
+    <div class="md:col-span-7 grid sm:grid-cols-2 gap-6">
+      <div class="card-lift bg-surface-card border border-border-subtle rounded-xl p-8 relative overflow-hidden group hover:border-error/40 transition-colors">
+        <div class="w-12 h-12 rounded-full bg-error/10 flex items-center justify-center text-error mb-6">
+          <span class="material-symbols-outlined icon-nudge" style="font-variation-settings:'FILL' 1">close</span>
+        </div>
+        <h3 class="font-display text-xl text-on-surface mb-3 font-bold">Limitado a redes</h3>
+        <p class="text-sm text-text-muted leading-relaxed">Si buscan un profesional en Google, no aparecés. Muchos clientes prefieren buscar fuera de Instagram.</p>
+      </div>
+      <div class="card-lift bg-surface-card border border-primary/30 rounded-xl p-8 relative overflow-hidden group hover:border-primary transition-colors shadow-[0_0_30px_rgba(157,78,221,0.06)]">
+        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+          <span class="material-symbols-outlined icon-nudge" style="font-variation-settings:'FILL' 1">check_circle</span>
+        </div>
+        <h3 class="font-display text-xl text-on-surface mb-3 font-bold">Con tu propia web</h3>
+        <p class="text-sm text-text-muted leading-relaxed">Tenés presencia donde te buscan. Quien entra entiende tu servicio y te escribe directo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW CLIENTS ARRIVE -->
+<section class="reveal py-16 md:py-28 px-5 md:px-6 bg-surface-container-lowest border-y border-border-subtle">
+  <div class="max-w-container mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="text-xs font-bold tracking-widest uppercase text-secondary mb-4 block">Así funciona</span>
+      <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-4">Cómo te llegan los clientes</h2>
+      <p class="text-lg text-text-muted">El camino desde que te buscan hasta que te escriben por WhatsApp.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+      <div class="hidden lg:block absolute top-6 left-[12%] right-[12%] h-px bg-border-subtle z-0"></div>
+      <div class="step-hover relative z-10 text-center reveal-d1 reveal">
+        <div class="step-circle w-12 h-12 mx-auto rounded-full bg-surface-card border border-border-subtle flex items-center justify-center text-secondary font-bold mb-5">1</div>
+        <h4 class="font-bold text-lg text-on-surface mb-2">Buscan en Google</h4>
+        <p class="text-sm text-text-muted">Estructura SEO para que Google pueda indexarte y mostrarte.</p>
+      </div>
+      <div class="step-hover relative z-10 text-center reveal-d2 reveal">
+        <div class="step-circle w-12 h-12 mx-auto rounded-full bg-surface-card border border-border-subtle flex items-center justify-center text-secondary font-bold mb-5">2</div>
+        <h4 class="font-bold text-lg text-on-surface mb-2">Llegan a tu página</h4>
+        <p class="text-sm text-text-muted">En segundos entienden quién sos y qué ofrecés.</p>
+      </div>
+      <div class="step-hover relative z-10 text-center reveal-d3 reveal">
+        <div class="step-circle w-12 h-12 mx-auto rounded-full bg-surface-card border border-border-subtle flex items-center justify-center text-secondary font-bold mb-5">3</div>
+        <h4 class="font-bold text-lg text-on-surface mb-2">Entienden tu servicio</h4>
+        <p class="text-sm text-text-muted">Queda claro por qué elegirte, sin confusión.</p>
+      </div>
+      <div class="step-hover relative z-10 text-center reveal-d4 reveal">
+        <div class="step-circle w-12 h-12 mx-auto rounded-full bg-primary text-white flex items-center justify-center font-bold mb-5 shadow-[0_0_15px_rgba(157,78,221,0.35)] scale-110">4</div>
+        <h4 class="font-bold text-lg text-primary mb-2">Te escriben por WhatsApp</h4>
+        <p class="text-sm text-text-muted">Un botón los lleva directo. Recibís la consulta lista.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="reveal py-16 md:py-28 px-5 md:px-6 max-w-container mx-auto" id="proyectos">
+  <div class="mb-14">
+    <span class="text-xs font-bold tracking-widest uppercase text-primary mb-4 block">Portfolio</span>
+    <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-4">Proyectos</h2>
+    <p class="text-lg text-text-muted max-w-2xl">Desde sistemas web completos hasta landing pages orientadas a conversión.</p>
+  </div>
+
+  <!-- Featured Camaleón -->
+  <div class="card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden mb-14">
+    <div class="grid md:grid-cols-2">
+      <div class="p-8 md:p-12 flex flex-col justify-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider mb-6 w-max border border-secondary/20">
+          <span class="material-symbols-outlined text-base">star</span> Proyecto destacado
+        </div>
+        <h3 class="font-display text-3xl md:text-4xl text-on-surface mb-3 font-bold">Camaleón Club</h3>
+        <p class="text-primary-container mb-5 font-medium">Sistema para administrar tu complejo deportivo de forma simple.</p>
+        <p class="text-sm text-text-muted mb-8 leading-relaxed">
+          Reemplaza planillas de Excel y mensajes desordenados. Automatiza reservas, controla pagos, organiza la caja diaria y evita dobles turnos.
+        </p>
+        <div class="grid grid-cols-2 gap-3 mb-8 text-sm text-on-surface-variant">
+          <div class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings:'FILL' 1">check_circle</span> Reservas online 24 hs</div>
+          <div class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings:'FILL' 1">check_circle</span> Control de pagos</div>
+          <div class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings:'FILL' 1">check_circle</span> Caja diaria</div>
+          <div class="flex gap-2"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings:'FILL' 1">check_circle</span> Evitar duplicadas</div>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a class="inline-flex items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://camaleonclub.com" target="_blank" rel="noopener noreferrer">Ver landing <span class="material-symbols-outlined text-base">open_in_new</span></a>
+          <a class="inline-flex items-center gap-2 text-primary border border-primary/30 hover:border-primary hover:bg-primary/5 px-5 py-3 rounded text-sm font-bold transition-colors" href="https://camaleonclub.com/app/" target="_blank" rel="noopener noreferrer">Ver sistema <span class="material-symbols-outlined text-base">open_in_new</span></a>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest p-6 md:p-8 flex items-center justify-center border-t md:border-t-0 md:border-l border-border-subtle">
+        <img src="camaleon.png" alt="Camaleón Club — sistema de reservas" class="w-full h-auto rounded-lg shadow-2xl border border-border-subtle/50 object-cover max-h-80"/>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="font-display text-xl text-on-surface mb-8 border-b border-border-subtle pb-4">Páginas web y landing pages</h3>
+  <div class="grid md:grid-cols-3 gap-8">
+    <!-- Project cards -->
+    <article class="reveal reveal-d1 card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden group flex flex-col">
+      <div class="h-56 overflow-hidden border-b border-border-subtle relative">
+        <img src="camipsicope.webp" alt="Landing psicopedagoga" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
+        <span class="absolute top-4 left-4 bg-background/90 backdrop-blur text-xs font-bold px-3 py-1 rounded border border-border-subtle flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> En producción</span>
+      </div>
+      <div class="p-7 flex flex-col flex-grow">
+        <p class="text-xs font-bold uppercase tracking-wider text-text-muted mb-2">Sector Salud / Educación</p>
+        <h4 class="font-display text-2xl text-on-surface mb-5 font-bold">Psicopedagoga</h4>
+        <div class="space-y-3 mb-6 flex-grow text-sm">
+          <p><span class="text-error-alert font-bold block mb-0.5">Problema</span><span class="text-on-surface-variant">Los padres no confiaban en contactar a una profesional sin presencia online.</span></p>
+          <p><span class="text-primary font-bold block mb-0.5">Solución</span><span class="text-on-surface-variant">Página cálida y profesional que genera confianza y lleva al WhatsApp.</span></p>
+        </div>
+        <a class="w-full inline-flex justify-center items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://camipsicope.com.ar" target="_blank" rel="noopener noreferrer">Ver proyecto <span class="material-symbols-outlined text-base">open_in_new</span></a>
+      </div>
+    </article>
+
+    <article class="reveal reveal-d2 card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden group flex flex-col">
+      <div class="h-56 overflow-hidden border-b border-border-subtle relative">
+        <img src="comerenserio.webp" alt="Landing viandas" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
+        <span class="absolute top-4 left-4 bg-background/90 backdrop-blur text-xs font-bold px-3 py-1 rounded border border-border-subtle flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> En producción</span>
+      </div>
+      <div class="p-7 flex flex-col flex-grow">
+        <p class="text-xs font-bold uppercase tracking-wider text-text-muted mb-2">Sector Gastronómico</p>
+        <h4 class="font-display text-2xl text-on-surface mb-5 font-bold">Negocio de Viandas</h4>
+        <div class="space-y-3 mb-6 flex-grow text-sm">
+          <p><span class="text-error-alert font-bold block mb-0.5">Problema</span><span class="text-on-surface-variant">Pedidos por Instagram de forma desordenada y lenta.</span></p>
+          <p><span class="text-primary font-bold block mb-0.5">Solución</span><span class="text-on-surface-variant">Página mobile-first: eligen menú y piden en menos de 1 minuto.</span></p>
+        </div>
+        <a class="w-full inline-flex justify-center items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://comerenserio.com.ar" target="_blank" rel="noopener noreferrer">Ver proyecto <span class="material-symbols-outlined text-base">open_in_new</span></a>
+      </div>
+    </article>
+
+    <article class="reveal reveal-d3 card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden group flex flex-col">
+      <div class="h-56 overflow-hidden border-b border-border-subtle relative">
+        <img src="cejuf-consultorios.webp" alt="Consultorios médicos" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
+        <span class="absolute top-4 left-4 bg-surface-variant/90 backdrop-blur text-xs font-bold px-3 py-1 rounded border border-border-subtle">Vista previa</span>
+      </div>
+      <div class="p-7 flex flex-col flex-grow">
+        <p class="text-xs font-bold uppercase tracking-wider text-text-muted mb-2">Sector Salud</p>
+        <h4 class="font-display text-2xl text-on-surface mb-5 font-bold">Consultorios Médicos</h4>
+        <div class="space-y-3 mb-6 flex-grow text-sm">
+          <p><span class="text-error-alert font-bold block mb-0.5">Problema</span><span class="text-on-surface-variant">No encontraban cómo pedir turno fuera de horario.</span></p>
+          <p><span class="text-primary font-bold block mb-0.5">Solución</span><span class="text-on-surface-variant">Landing que transmite confianza y guía al WhatsApp en segundos.</span></p>
+        </div>
+        <a class="w-full inline-flex justify-center items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://manumarquez7.github.io/CEJUF-Consultorios/" target="_blank" rel="noopener noreferrer">Ver proyecto <span class="material-symbols-outlined text-base">open_in_new</span></a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="mt-14 text-center">
+    <h3 class="font-display text-xl text-on-surface mb-5">¿Querés una web así para tu negocio?</h3>
+    <a class="inline-flex items-center gap-2 bg-primary text-white text-sm font-bold tracking-wider uppercase px-8 py-4 rounded hover:bg-primary-container transition-all" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AQuiero%20mi%20web." target="_blank" rel="noopener noreferrer">Quiero mi web</a>
+  </div>
+</section>
+
+<!-- PROCESS WORK -->
+<section class="reveal py-16 md:py-28 px-5 md:px-6 bg-surface-container-lowest border-y border-border-subtle" id="proceso">
+  <div class="max-w-container mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-4 block">Cómo trabajamos</span>
+      <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-4">Proceso claro y sin vueltas</h2>
+      <p class="text-text-muted">Sin términos técnicos. Yo me encargo del diseño, vos de atender a quienes te contacten.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="reveal reveal-d1 card-lift bg-surface-card border border-border-subtle rounded-xl p-6">
+        <p class="text-sm font-bold text-primary mb-3">01</p>
+        <h4 class="font-bold text-on-surface mb-2">Entiendo tu servicio</h4>
+        <p class="text-sm text-text-muted leading-relaxed">Hablamos sobre tu profesión y el cliente ideal que querés atraer.</p>
+      </div>
+      <div class="reveal reveal-d2 card-lift bg-surface-card border border-border-subtle rounded-xl p-6">
+        <p class="text-sm font-bold text-primary mb-3">02</p>
+        <h4 class="font-bold text-on-surface mb-2">Boceto visual</h4>
+        <p class="text-sm text-text-muted leading-relaxed">Primera versión de estilo para validar que transmita la calidad de tu servicio.</p>
+      </div>
+      <div class="reveal reveal-d3 card-lift bg-surface-card border border-border-subtle rounded-xl p-6">
+        <p class="text-sm font-bold text-primary mb-3">03</p>
+        <h4 class="font-bold text-on-surface mb-2">Desarrollo web</h4>
+        <p class="text-sm text-text-muted leading-relaxed">Programo la página para que cargue rápido y se vea perfecta en celulares.</p>
+      </div>
+      <div class="reveal reveal-d4 card-lift bg-surface-card border border-border-subtle rounded-xl p-6">
+        <p class="text-sm font-bold text-primary mb-3">04</p>
+        <h4 class="font-bold text-on-surface mb-2">Lista para WhatsApp</h4>
+        <p class="text-sm text-text-muted leading-relaxed">Se publica conectada a tu teléfono para empezar a recibir consultas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUDES -->
+<section class="reveal py-16 md:py-28 px-5 md:px-6 max-w-container mx-auto" id="incluye">
+  <div class="text-center max-w-xl mx-auto mb-12">
+    <span class="text-xs font-bold tracking-widest uppercase text-primary mb-4 block">Qué recibís</span>
+    <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-4">Tu landing incluye esto</h2>
+    <p class="text-text-muted">Todo lo necesario para una web profesional lista para vender.</p>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+    <div class="card-lift flex gap-4 bg-surface-card border border-border-subtle rounded-xl p-5">
+      <span class="material-symbols-outlined text-primary text-2xl shrink-0 icon-nudge">palette</span>
+      <div><h4 class="font-bold mb-1">Diseño personalizado</h4><p class="text-sm text-text-muted">Desde cero según tu servicio, colores e identidad. Sin plantillas genéricas.</p></div>
+    </div>
+    <div class="card-lift flex gap-4 bg-surface-card border border-border-subtle rounded-xl p-5">
+      <span class="material-symbols-outlined text-primary text-2xl shrink-0 icon-nudge">smartphone</span>
+      <div><h4 class="font-bold mb-1">Optimizada para celular</h4><p class="text-sm text-text-muted">Se ve y funciona perfectamente en teléfonos.</p></div>
+    </div>
+    <div class="card-lift flex gap-4 bg-surface-card border border-border-subtle rounded-xl p-5">
+      <span class="material-symbols-outlined text-primary text-2xl shrink-0 icon-nudge">chat</span>
+      <div><h4 class="font-bold mb-1">WhatsApp directo</h4><p class="text-sm text-text-muted">Canal simple para que te consulten desde la página.</p></div>
+    </div>
+    <div class="card-lift flex gap-4 bg-surface-card border border-border-subtle rounded-xl p-5">
+      <span class="material-symbols-outlined text-primary text-2xl shrink-0 icon-nudge">cloud</span>
+      <div><h4 class="font-bold mb-1">Hosting incluido</h4><p class="text-sm text-text-muted">Sin costo extra de hosting. El dominio se abona por separado.</p></div>
+    </div>
+  </div>
+  <div class="card-lift max-w-3xl mx-auto mt-6 flex gap-4 bg-surface-card border border-border-subtle rounded-xl p-5">
+    <span class="material-symbols-outlined text-primary text-2xl shrink-0 icon-nudge">shield</span>
+    <div>
+      <h4 class="font-bold mb-1">30 días de soporte incluidos</h4>
+      <p class="text-sm text-text-muted">Después de publicar, sigo disponible para ajustes menores y dudas relacionadas con la página.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="reveal py-16 md:py-28 px-5 md:px-6 bg-surface-container-lowest border-y border-border-subtle" id="precios">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-4 block">Inversión</span>
+      <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-4">Precios claros</h2>
+      <p class="text-text-muted">Pago único. Sin mensualidades.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 items-stretch">
+      <!-- Landing 200 -->
+      <div class="card-lift bg-surface-card border border-border-subtle rounded-xl p-7 flex flex-col">
+        <h3 class="font-display text-xl font-bold text-on-surface">Landing</h3>
+        <p class="text-sm text-text-muted mt-2 leading-relaxed">Para tener una presencia profesional y clara de tu negocio.</p>
+        <p class="mt-5 text-4xl font-bold tracking-tight">$200.000 <span class="text-base font-semibold text-text-muted">ARS</span></p>
+        <p class="text-xs font-semibold text-text-muted mt-1">Pago único. Sin mensualidades.</p>
+        <ul class="mt-6 space-y-3 text-sm font-medium flex-grow">
+          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">check_circle</span> Diseño personalizado</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">check_circle</span> Adaptación a celulares</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">check_circle</span> WhatsApp directo</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">check_circle</span> Hosting incluido</li>
+        </ul>
+        <a class="mt-8 w-full inline-flex justify-center items-center min-h-12 rounded border-2 border-border-subtle hover:border-on-surface text-sm font-bold transition-colors" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20quiero%20consultar%20por%20el%20plan%20Landing%20de%20%24200.000%20ARS." target="_blank" rel="noopener noreferrer">Consultar plan Landing</a>
+      </div>
+      <!-- Pro 300 -->
+      <div class="card-lift relative bg-surface-card border-2 border-primary rounded-xl p-7 flex flex-col shadow-[0_0_40px_rgba(157,78,221,0.12)]">
+        <span class="absolute -top-3 right-6 bg-primary text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Recomendado</span>
+        <h3 class="font-display text-xl font-bold text-on-surface">Profesional</h3>
+        <p class="text-sm text-text-muted mt-2 leading-relaxed">Para negocios que necesitan una web más completa para presentar mejor sus servicios.</p>
+        <p class="mt-5 text-4xl font-bold tracking-tight">$300.000 <span class="text-base font-semibold text-text-muted">ARS</span></p>
+        <p class="text-xs font-semibold text-text-muted mt-1">Pago único. Sin mensualidades.</p>
+        <ul class="mt-6 space-y-3 text-sm font-medium flex-grow">
+          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">verified</span> <strong>Todo lo de Landing</strong></li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">check_circle</span> Más secciones y contenido</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">check_circle</span> Estructura más completa</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">check_circle</span> Mayor profundidad de diseño</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">check_circle</span> Optimización SEO técnica</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings:'FILL' 1">check_circle</span> Asesoramiento personalizado</li>
+        </ul>
+        <a class="mt-8 w-full inline-flex justify-center items-center gap-2 min-h-12 rounded bg-primary text-white text-sm font-bold hover:bg-primary-container transition-colors" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20quiero%20consultar%20por%20el%20plan%20Profesional%20de%20%24300.000%20ARS." target="_blank" rel="noopener noreferrer">Consultar plan Profesional</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="reveal py-16 md:py-28 px-5 md:px-6 max-w-container mx-auto" id="quien-soy">
+  <div class="max-w-lg mx-auto text-center">
+    <span class="text-xs font-bold tracking-widest uppercase text-primary mb-4 block">Sobre mí</span>
+    <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-8">Quién está detrás de MarquezWeb</h2>
+    <img src="manuel-marquez-desarrollador-web.webp" alt="Manuel Márquez" class="mx-auto size-40 rounded-full object-cover border-2 border-primary/40 mb-8" width="160" height="160"/>
+    <div class="card-lift bg-surface-card border border-border-subtle rounded-xl p-6 text-left">
+      <h3 class="font-display text-xl font-bold">Manuel Márquez</h3>
+      <p class="text-xs font-bold uppercase tracking-widest text-primary mt-1">Desarrollador Web · MarquezWeb</p>
+      <p class="mt-4 text-sm text-text-muted leading-relaxed">Trabajo personalmente en cada proyecto: hablás directo conmigo, entiendo tu servicio, diseño la página y me encargo del desarrollo de principio a fin.</p>
+      <ul class="mt-5 space-y-3 text-sm font-medium">
+        <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg">school</span> Formación en programación — UTN Córdoba</li>
+        <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg">folder_open</span> Proyectos publicados para salud, gastronomía y servicios</li>
+        <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg">public</span> También desarrollé sistemas como Camaleón Club</li>
+      </ul>
+    </div>
+    <div class="card-lift mt-4 bg-surface-card border border-border-subtle rounded-xl p-5 text-left flex gap-3">
+      <span class="material-symbols-outlined text-primary shrink-0 icon-nudge">tune</span>
+      <div>
+        <h4 class="font-bold">¿Tu caso es diferente?</h4>
+        <p class="text-sm text-text-muted mt-1">Si necesitás varias páginas o una estructura distinta, preparo una propuesta personalizada.</p>
+        <a class="inline-flex mt-3 min-h-10 items-center rounded bg-on-surface text-background px-4 text-xs font-bold" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web%20y%20necesito%20una%20propuesta%20personalizada." target="_blank" rel="noopener noreferrer">Solicitar propuesta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="reveal py-16 md:py-28 px-5 md:px-6 bg-surface-container-lowest border-y border-border-subtle" id="faq">
+  <div class="max-w-2xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-4 block">Preguntas frecuentes</span>
+      <h2 class="font-display text-2xl md:text-4xl text-on-surface">FAQ</h2>
+    </div>
+    <div class="space-y-3" id="faq-list">
+      <div class="faq-item open bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
+        <button type="button" class="faq-q w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold" aria-expanded="true">¿Me van a encontrar en Google? <span class="material-symbols-outlined faq-icon text-primary transition-transform">expand_more</span></button>
+        <div class="faq-a px-5 text-sm text-text-muted leading-relaxed">Tu página va a estar preparada técnicamente para aparecer en Google. El posicionamiento orgánico lleva tiempo, pero la base técnica va a estar bien hecha desde el día 1.</div>
+      </div>
+      <div class="faq-item bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
+        <button type="button" class="faq-q w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold" aria-expanded="false">¿Tengo que escribir yo los textos? <span class="material-symbols-outlined faq-icon text-primary transition-transform">expand_more</span></button>
+        <div class="faq-a px-5 text-sm text-text-muted leading-relaxed">No. Me encargo de redactar todo basándome en lo que me cuentes de tu negocio.</div>
+      </div>
+      <div class="faq-item bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
+        <button type="button" class="faq-q w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold" aria-expanded="false">¿Necesito pagar hosting? <span class="material-symbols-outlined faq-icon text-primary transition-transform">expand_more</span></button>
+        <div class="faq-a px-5 text-sm text-text-muted leading-relaxed">No. El hosting está incluido. Solo pagás el dominio propio (.com.ar), cuya renovación anual ronda los $8.500.</div>
+      </div>
+      <div class="faq-item bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
+        <button type="button" class="faq-q w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold" aria-expanded="false">¿Puedo editar la página después? <span class="material-symbols-outlined faq-icon text-primary transition-transform">expand_more</span></button>
+        <div class="faq-a px-5 text-sm text-text-muted leading-relaxed">Sí. Si necesitás cambiar textos, fotos o agregar algo, me avisás y lo gestionamos de forma accesible.</div>
+      </div>
+      <div class="faq-item bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
+        <button type="button" class="faq-q w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold" aria-expanded="false">¿Cuánto tarda la entrega? <span class="material-symbols-outlined faq-icon text-primary transition-transform">expand_more</span></button>
+        <div class="faq-a px-5 text-sm text-text-muted leading-relaxed">Primera versión lista en 5–7 días hábiles. Después ajustamos según lo que necesites.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="reveal py-20 md:py-28 px-5 md:px-6 relative overflow-hidden" id="contacto">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -mr-48 -mt-48 pointer-events-none"></div>
+  <div class="max-w-2xl mx-auto text-center relative z-10">
+    <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-5">¿Listo para tener tu web?</h2>
+    <p class="text-lg text-text-muted mb-10">Escribime por WhatsApp. Respuesta personal y sin compromiso.</p>
+    <a class="inline-flex items-center justify-center gap-2 bg-primary text-white text-sm font-bold tracking-wider uppercase px-8 py-4 rounded hover:bg-primary-container transition-all shadow-[0_0_20px_rgba(157,78,221,0.3)] w-full sm:w-auto" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web.%0ASoy%20%5Bprofesi%C3%B3n%5D%20y%20quiero%20una%20landing%20para%20conseguir%20m%C3%A1s%20consultas%20por%20WhatsApp.%0A%0A%C2%BFPod%C3%A9s%20contarme%20c%C3%B3mo%20trabaj%C3%A1s%3F" target="_blank" rel="noopener noreferrer">
+      <span class="material-symbols-outlined">chat</span> Quiero empezar mi web
+    </a>
+    <p class="mt-4 text-xs text-text-muted">Trato directo y sin compromiso.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-surface-container-lowest border-t border-border-subtle py-10 px-5 md:px-6">
+  <div class="max-w-container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <a href="#" class="flex items-center gap-2">
+      <img src="logo.png" alt="" class="h-9 w-9 rounded-full object-cover"/>
+      <span class="font-bold">Marquez<span class="text-primary">Web</span></span>
+    </a>
+    <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-sm font-medium text-text-muted">
+      <a class="hover:text-on-surface transition-colors" href="mailto:manuelmarquez2537@gmail.com">manuelmarquez2537@gmail.com</a>
+      <a class="hover:text-on-surface transition-colors" href="https://wa.me/5493513066687" target="_blank" rel="noopener noreferrer">+54 9 3513 06-6687</a>
+    </div>
+  </div>
+  <div class="max-w-container mx-auto mt-8 text-center md:text-left text-xs text-text-muted flex flex-col md:flex-row md:justify-between gap-2">
+    <p>Diseño de landing pages para profesionales. Hecho en Argentina.</p>
+    <p>© <span id="year"></span> MarquezWeb. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- FAB WhatsApp -->
+<a class="fab-wa fixed bottom-6 right-6 z-50 w-14 h-14 bg-wa text-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.45)] hover:scale-110 transition-transform group" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web.%0AQuiero%20saber%20m%C3%A1s%20sobre%20tus%20servicios." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <span class="absolute right-full mr-3 bg-surface-card border border-border-subtle text-sm font-bold py-2 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block shadow-lg">¿Querés tu web?</span>
+</a>
+
+<!-- Mobile sticky -->
+<a id="sticky-cta" class="btn-wa-motion fixed inset-x-5 bottom-5 z-50 flex min-h-12 items-center justify-center rounded-xl bg-wa text-sm font-extrabold text-white shadow-lg md:hidden opacity-0 pointer-events-none translate-y-2 transition-all duration-300" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web.%0ASoy%20%5Bprofesi%C3%B3n%5D%20y%20quiero%20una%20landing%20para%20conseguir%20m%C3%A1s%20consultas%20por%20WhatsApp.%0A%0A%C2%BFPod%C3%A9s%20contarme%20c%C3%B3mo%20trabaj%C3%A1s%3F" target="_blank" rel="noopener noreferrer">Cotizar mi página web</a>
+
+<script src="script.js" defer></script>
+</body>
+</html>
