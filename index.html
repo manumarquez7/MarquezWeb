@@ -14,8 +14,8 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <meta name="theme-color" content="#111317"/>
-<title>MarquezWeb — Landing pages para profesionales</title>
-<meta name="description" content="Diseño páginas web y landing pages para profesionales que quieren más consultas por WhatsApp. Hecho en Argentina."/>
+<title>MarquezWeb — Landing pages para profesionales y servicios</title>
+<meta name="description" content="Landing pages para profesionales y servicios: una web propia para que te encuentren, entiendan tu propuesta y te consulten por WhatsApp."/>
 <meta name="author" content="Manuel Marquez"/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://marquezweb.com.ar/"/>
@@ -25,14 +25,14 @@
 <meta property="og:site_name" content="MarquezWeb"/>
 <meta property="og:locale" content="es_AR"/>
 <meta property="og:url" content="https://marquezweb.com.ar/"/>
-<meta property="og:title" content="MarquezWeb — Landing pages para profesionales"/>
-<meta property="og:description" content="Diseño páginas web y landing pages para profesionales que quieren más consultas por WhatsApp. Hecho en Argentina."/>
+<meta property="og:title" content="MarquezWeb — Landing pages para profesionales y servicios"/>
+<meta property="og:description" content="Landing pages para profesionales y servicios: una web propia para que te encuentren, entiendan tu propuesta y te consulten por WhatsApp."/>
 <meta property="og:image" content="https://marquezweb.com.ar/og-image.webp"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="MarquezWeb — Landing pages para profesionales"/>
-<meta name="twitter:description" content="Diseño páginas web y landing pages para profesionales que quieren más consultas por WhatsApp. Hecho en Argentina."/>
+<meta name="twitter:title" content="MarquezWeb — Landing pages para profesionales y servicios"/>
+<meta name="twitter:description" content="Landing pages para profesionales y servicios: una web propia para que te encuentren, entiendan tu propuesta y te consulten por WhatsApp."/>
 <meta name="twitter:image" content="https://marquezweb.com.ar/og-image.webp"/>
 
 <link rel="icon" href="logo.png"/>
@@ -48,6 +48,89 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  /* ── Header and hero refinement ── */
+  .site-header {
+    background-color: rgba(17, 19, 23, 0.95);
+    border-color: rgba(43, 47, 54, 0.8);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+  .site-nav-inner { height: 76px; }
+  .site-nav { gap: 2.25rem; }
+  .nav-cta {
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 20px rgba(157, 78, 221, 0.22);
+  }
+  .site-main { padding-top: 76px; }
+  .hero-section { padding-top: 4rem; padding-bottom: 4rem; }
+  .hero-layout { gap: 3rem; }
+  .hero-badge {
+    margin-bottom: 2rem;
+    padding: 0.375rem 0.875rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+  .hero-title {
+    max-width: 42rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+  .hero-subtitle {
+    max-width: 36rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.0625rem;
+  }
+  .hero-specialization {
+    margin-bottom: 2.25rem;
+    border-color: rgba(157, 78, 221, 0.8);
+    padding-left: 1rem;
+  }
+  .hero-specialization p:last-child {
+    margin-top: 0.625rem;
+    font-size: 0.6875rem;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+  }
+  .hero-actions { gap: 1.25rem; }
+  .hero-cta {
+    min-height: 3.5rem;
+    padding: 1rem 2rem;
+    gap: 0.625rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 12px 28px rgba(157, 78, 221, 0.3);
+  }
+  .hero-secondary-cta { gap: 0.625rem; font-size: 0.875rem; font-weight: 600; }
+  .hero-benefits { margin-top: 3rem; gap: 1rem; font-size: 0.9375rem; }
+  .hero-benefits li { gap: 0.875rem; }
+  .hero-benefits .material-symbols-outlined { font-size: 1.35rem; }
+  .hero-trust {
+    margin-top: 1.75rem;
+    gap: 0.375rem 0.875rem;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+  }
+  .hero-visual { width: 100%; }
+  .hero-frame { border-radius: 1rem; }
+
+  @media (min-width: 640px) {
+    .hero-title { font-size: 2.75rem; }
+  }
+  @media (min-width: 768px) {
+    .hero-section { padding-top: 6rem; padding-bottom: 6rem; }
+    .hero-title { font-size: 3rem; }
+  }
+  @media (min-width: 1024px) {
+    .hero-section { padding-top: 7.5rem; padding-bottom: 7.5rem; }
+    .hero-layout { gap: 4rem; }
+    .hero-title { font-size: 3.45rem; }
+    .hero-visual { max-width: 38rem; justify-self: end; }
+  }
+  @media (min-width: 1280px) {
+    .hero-layout { gap: 5rem; }
   }
 
   /* ── Scroll reveal (fast & soft) ── */
@@ -92,10 +175,23 @@
 
   /* ── Hero image: premium hover ── */
   .hero-frame {
+    border-color: rgba(157, 78, 221, 0.22);
+    box-shadow:
+      0 30px 72px rgba(0, 0, 0, 0.46),
+      0 0 44px rgba(157, 78, 221, 0.1);
     transition:
       transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
       box-shadow 0.4s ease;
     will-change: transform;
+  }
+  .hero-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: inherit;
+    pointer-events: none;
   }
   @media (hover: hover) and (pointer: fine) {
     .hero-frame:hover {
@@ -353,7 +449,7 @@
     "name": "MarquezWeb",
     "url": "https://marquezweb.com.ar/",
     "logo": "https://marquezweb.com.ar/logo.png",
-    "description": "Diseño páginas web y landing pages para profesionales que quieren más consultas por WhatsApp. Hecho en Argentina.",
+    "description": "Landing pages para profesionales y servicios: una web propia para que te encuentren, entiendan tu propuesta y te consulten por WhatsApp.",
     "founder": { "@type": "Person", "name": "Manuel Marquez" },
     "areaServed": "AR",
     "serviceType": "Diseño de Landing Pages",
@@ -368,17 +464,17 @@
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- Nav -->
-<header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border-subtle transition-all duration-300" id="navbar">
-  <div class="flex justify-between items-center h-20 px-5 md:px-6 max-w-container mx-auto">
+<header class="site-header fixed top-0 w-full z-50 bg-background/95 backdrop-blur-lg border-b border-border-subtle/80 transition-all duration-300" id="navbar">
+  <div class="site-nav-inner flex justify-between items-center h-[76px] px-5 md:px-6 max-w-container mx-auto">
     <a href="#" class="logo-hover flex items-center gap-2.5 hover:opacity-80 transition-opacity" aria-label="MarquezWeb">
-      <img src="logo.png" alt="" class="h-10 w-10 rounded-full object-cover" width="40" height="40"/>
-      <span class="font-bold text-lg tracking-tight">Marquez<span class="text-primary">Web</span></span>
+      <img src="logo.png" alt="" class="h-9 w-9 rounded-full object-cover ring-1 ring-white/5" width="36" height="36"/>
+      <span class="font-bold text-[1.0625rem] tracking-tight">Marquez<span class="text-primary">Web</span></span>
     </a>
-    <nav class="hidden md:flex items-center gap-8" aria-label="Principal">
+    <nav class="site-nav hidden md:flex items-center gap-9" aria-label="Principal">
       <a class="nav-link text-xs font-bold tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors" href="#proyectos">Proyectos</a>
       <a class="nav-link text-xs font-bold tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors" href="#precios">Precios</a>
       <a class="nav-link text-xs font-bold tracking-wider uppercase text-on-surface-variant hover:text-primary transition-colors" href="#faq">FAQ</a>
-      <a class="btn-primary-motion glow-violet-hover inline-flex items-center bg-primary text-white text-xs font-bold tracking-wider uppercase px-6 py-3 rounded hover:bg-primary-container shadow-[0_0_15px_rgba(157,78,221,0.25)]" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AQuiero%20cotizar%20mi%20web." target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+      <a class="nav-cta btn-primary-motion glow-violet-hover inline-flex items-center bg-primary text-white text-xs font-bold tracking-wider uppercase px-6 py-3 rounded-lg hover:bg-primary-container shadow-[0_8px_20px_rgba(157,78,221,0.22)]" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AQuiero%20cotizar%20mi%20web." target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
     </nav>
     <button type="button" id="mobile-menu-btn" class="md:hidden text-on-surface hover:text-primary" aria-label="Abrir menú" aria-expanded="false">
       <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
@@ -393,49 +489,53 @@
   <a class="mt-4 bg-primary text-white text-sm font-bold tracking-wider uppercase px-8 py-4 rounded-full" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AQuiero%20cotizar%20mi%20web." target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
 </div>
 
-<main class="pt-20">
+<main class="site-main pt-[76px]">
 
 <!-- HERO -->
-<section class="relative flex items-center py-14 md:py-20 lg:py-24 overflow-hidden">
+<section class="hero-section relative flex items-center py-16 md:py-24 lg:py-[7.5rem] overflow-hidden">
   <div class="absolute inset-0 z-0 pointer-events-none">
     <div class="absolute top-1/4 right-0 w-[420px] h-[420px] bg-primary/10 rounded-full blur-[120px]"></div>
   </div>
   <div class="relative z-10 w-full max-w-container mx-auto px-5 md:px-6">
-    <div class="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+    <div class="hero-layout grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
       <!-- Copy -->
-      <div class="order-1">
-        <div class="hero-in hero-in-d1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border-subtle bg-surface-card/80 mb-7">
+      <div class="hero-copy order-1">
+        <div class="hero-badge hero-in hero-in-d1 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-border-subtle bg-surface-card/80 mb-8 shadow-[0_6px_18px_rgba(0,0,0,0.12)]">
           <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
           <span class="text-[11px] font-medium tracking-wide text-text-muted">Solo 3 lugares disponibles este mes</span>
         </div>
-        <h1 class="hero-in hero-in-d2 font-display text-[1.75rem] sm:text-4xl md:text-[2.75rem] leading-[1.12] text-on-surface mb-5">
-          Tus páginas web <span class="text-gradient font-bold">profesionales</span> en 5–7 días
+        <h1 class="hero-title hero-in hero-in-d2 font-display text-[2rem] sm:text-[2.75rem] md:text-5xl lg:text-[3.45rem] leading-[1.05] tracking-[-0.025em] text-on-surface mb-6 max-w-[42rem]">
+          Una web profesional para que dejen de buscarte solo en <span class="text-gradient font-bold">Instagram</span>
         </h1>
-        <p class="hero-in hero-in-d3 text-base sm:text-lg text-text-muted mb-8 max-w-xl leading-relaxed">
-          Diseñadas para presentar tu servicio, generar confianza y llevar más consultas a WhatsApp.
+        <p class="hero-subtitle hero-in hero-in-d3 text-[1.0625rem] sm:text-lg text-text-muted mb-6 max-w-xl leading-relaxed">
+          Diseñada para que tus potenciales clientes te encuentren, entiendan tu servicio y te contacten por WhatsApp.
         </p>
-        <div class="hero-in hero-in-d4 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-          <a class="cta-once btn-primary-motion glow-violet-hover inline-flex items-center justify-center gap-2 bg-primary text-white text-sm font-bold tracking-wider uppercase px-7 py-3.5 rounded hover:bg-primary-container transition-all shadow-[0_0_20px_rgba(157,78,221,0.3)] w-full sm:w-auto" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web.%0ASoy%20%5Bprofesi%C3%B3n%5D%20y%20quiero%20una%20landing%20para%20conseguir%20m%C3%A1s%20consultas%20por%20WhatsApp.%0A%0A%C2%BFPod%C3%A9s%20contarme%20c%C3%B3mo%20trabaj%C3%A1s%3F" target="_blank" rel="noopener noreferrer">
+        <div class="hero-specialization hero-in hero-in-d3 mb-9 max-w-xl border-l-2 border-primary/80 pl-4">
+          <p class="text-sm font-semibold text-on-surface">Especializado en profesionales y servicios que necesitan convertir visitas en consultas.</p>
+          <p class="mt-2.5 text-[11px] font-bold uppercase tracking-[0.08em] leading-relaxed text-text-muted">Salud <span class="mx-1.5 text-primary">·</span> Profesionales independientes <span class="mx-1.5 text-primary">·</span> Servicios <span class="mx-1.5 text-primary">·</span> Negocios locales</p>
+        </div>
+        <div class="hero-actions hero-in hero-in-d4 flex flex-col sm:flex-row gap-5 items-start sm:items-center">
+          <a class="hero-cta cta-once btn-primary-motion glow-violet-hover inline-flex min-h-14 items-center justify-center gap-2.5 bg-primary text-white text-sm font-bold tracking-wider uppercase px-8 py-4 rounded-lg hover:bg-primary-container transition-all shadow-[0_12px_28px_rgba(157,78,221,0.3)] w-full sm:w-auto" href="https://wa.me/5493513066687?text=Hola%20Manuel.%0A%0AVengo%20de%20tu%20web.%0ASoy%20%5Bprofesi%C3%B3n%5D%20y%20quiero%20una%20landing%20para%20conseguir%20m%C3%A1s%20consultas%20por%20WhatsApp.%0A%0A%C2%BFPod%C3%A9s%20contarme%20c%C3%B3mo%20trabaj%C3%A1s%3F" target="_blank" rel="noopener noreferrer">
             Hablar con Manuel por WhatsApp
             <span class="material-symbols-outlined text-lg">arrow_forward</span>
           </a>
-          <a class="group inline-flex items-center gap-2 text-on-surface-variant hover:text-on-surface transition-colors" href="#proyectos">
+          <a class="hero-secondary-cta group inline-flex items-center gap-2.5 text-sm font-semibold text-on-surface-variant hover:text-on-surface transition-colors" href="#proyectos">
             Ver mis proyectos
             <span class="material-symbols-outlined group-hover:translate-y-0.5 transition-transform text-lg">arrow_downward</span>
           </a>
         </div>
-        <ul class="hero-in hero-in-d5 mt-10 flex flex-col gap-3 text-sm text-text-muted">
-          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">check_circle</span> Diseño 100% personalizado para tu servicio</li>
-          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">check_circle</span> Optimizada técnicamente para buscadores</li>
-          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings:'FILL' 1">check_circle</span> Canal directo hacia tu WhatsApp</li>
+        <ul class="hero-benefits hero-in hero-in-d5 mt-12 flex flex-col gap-4 text-[0.9375rem] text-text-muted">
+          <li class="flex items-center gap-3.5"><span class="material-symbols-outlined text-primary text-[1.35rem]" style="font-variation-settings:'FILL' 1">check_circle</span> Diseño y desarrollo a medida para tu servicio</li>
+          <li class="flex items-center gap-3.5"><span class="material-symbols-outlined text-primary text-[1.35rem]" style="font-variation-settings:'FILL' 1">check_circle</span> Una página propia para presentar tu propuesta con claridad</li>
+          <li class="flex items-center gap-3.5"><span class="material-symbols-outlined text-primary text-[1.35rem]" style="font-variation-settings:'FILL' 1">check_circle</span> Canal directo hacia tu WhatsApp</li>
         </ul>
-        <p class="mt-6 text-xs text-text-muted flex flex-wrap gap-x-3 gap-y-1">
-          <span>Trato 1 a 1</span><span class="opacity-40">·</span><span>Primera versión en 5–7 días</span><span class="opacity-40">·</span><span>Sin plantillas</span>
+        <p class="hero-trust mt-7 text-[11px] font-medium tracking-wide text-text-muted flex flex-wrap items-center gap-x-3.5 gap-y-1.5">
+          <span>Trato 1 a 1</span><span class="text-primary/70">·</span><span>Primera versión en 5–7 días</span><span class="text-primary/70">·</span><span>Sin plantillas</span>
         </p>
       </div>
       <!-- Visual -->
-      <div class="order-2 relative hero-visual-in">
-        <div class="hero-frame relative rounded-xl overflow-hidden border border-border-subtle/60 shadow-[0_24px_64px_rgba(0,0,0,0.45)] bg-surface-card">
+      <div class="hero-visual order-2 relative hero-visual-in lg:justify-self-end w-full">
+        <div class="hero-frame relative rounded-2xl overflow-hidden border border-border-subtle/60 bg-surface-card">
           <img
             src="hero-mockup.png"
             alt="Mockup de landing page profesional en notebook, estética oscura y violeta"
@@ -459,7 +559,7 @@
       <span class="text-xs font-bold tracking-widest uppercase text-error-alert mb-4 block">El problema real</span>
       <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-6 leading-tight">¿Solo usás Instagram para conseguir clientes?</h2>
       <p class="text-lg text-text-muted leading-relaxed">
-        Instagram es útil, pero tiene un problema: cuando alguien busca tu servicio en Google, <strong class="text-on-surface">no te encuentra… y termina yendo con otro.</strong>
+        Instagram es útil, pero necesitás una presencia propia: cuando alguien busca tu servicio en Google, <strong class="text-on-surface">tiene que poder encontrarte y saber quién sos.</strong>
       </p>
     </div>
     <div class="md:col-span-7 grid sm:grid-cols-2 gap-6">
@@ -468,7 +568,7 @@
           <span class="material-symbols-outlined icon-nudge" style="font-variation-settings:'FILL' 1">close</span>
         </div>
         <h3 class="font-display text-xl text-on-surface mb-3 font-bold">Limitado a redes</h3>
-        <p class="text-sm text-text-muted leading-relaxed">Si buscan un profesional en Google, no aparecés. Muchos clientes prefieren buscar fuera de Instagram.</p>
+        <p class="text-sm text-text-muted leading-relaxed">Las redes ayudan, pero una web propia reúne tu información para quien busca tu servicio fuera de Instagram.</p>
       </div>
       <div class="card-lift bg-surface-card border border-primary/30 rounded-xl p-8 relative overflow-hidden group hover:border-primary transition-colors shadow-[0_0_30px_rgba(157,78,221,0.06)]">
         <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
@@ -494,7 +594,7 @@
       <div class="step-hover relative z-10 text-center reveal-d1 reveal">
         <div class="step-circle w-12 h-12 mx-auto rounded-full bg-surface-card border border-border-subtle flex items-center justify-center text-secondary font-bold mb-5">1</div>
         <h4 class="font-bold text-lg text-on-surface mb-2">Buscan en Google</h4>
-        <p class="text-sm text-text-muted">Estructura SEO para que Google pueda indexarte y mostrarte.</p>
+        <p class="text-sm text-text-muted">Estructura SEO para que los buscadores puedan entender e indexar tu página.</p>
       </div>
       <div class="step-hover relative z-10 text-center reveal-d2 reveal">
         <div class="step-circle w-12 h-12 mx-auto rounded-full bg-surface-card border border-border-subtle flex items-center justify-center text-secondary font-bold mb-5">2</div>
@@ -510,6 +610,38 @@
         <div class="step-circle w-12 h-12 mx-auto rounded-full bg-primary text-white flex items-center justify-center font-bold mb-5 shadow-[0_0_15px_rgba(157,78,221,0.35)] scale-110">4</div>
         <h4 class="font-bold text-lg text-primary mb-2">Te escriben por WhatsApp</h4>
         <p class="text-sm text-text-muted">Un botón los lleva directo. Recibís la consulta lista.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL AUTHORITY -->
+<section class="reveal py-16 md:py-20 px-5 md:px-6 bg-surface-container-lowest border-y border-border-subtle">
+  <div class="max-w-container mx-auto">
+    <div class="max-w-2xl mb-10">
+      <span class="text-xs font-bold tracking-widest uppercase text-primary mb-4 block">Calidad técnica</span>
+      <h2 class="font-display text-2xl md:text-4xl text-on-surface">Construida para funcionar, no solo para verse bien</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="card-lift bg-surface-card border border-border-subtle rounded-xl p-5">
+        <span class="material-symbols-outlined text-primary text-2xl icon-nudge">smartphone</span>
+        <h3 class="font-bold text-on-surface mt-4 mb-2">100% responsive</h3>
+        <p class="text-sm text-text-muted leading-relaxed">Diseñada primero para celular y adaptada a cualquier pantalla.</p>
+      </div>
+      <div class="card-lift bg-surface-card border border-border-subtle rounded-xl p-5">
+        <span class="material-symbols-outlined text-primary text-2xl icon-nudge">search</span>
+        <h3 class="font-bold text-on-surface mt-4 mb-2">SEO técnico</h3>
+        <p class="text-sm text-text-muted leading-relaxed">Estructura preparada para que los buscadores puedan entender e indexar la página.</p>
+      </div>
+      <div class="card-lift bg-surface-card border border-border-subtle rounded-xl p-5">
+        <span class="material-symbols-outlined text-primary text-2xl icon-nudge">bolt</span>
+        <h3 class="font-bold text-on-surface mt-4 mb-2">Carga rápida</h3>
+        <p class="text-sm text-text-muted leading-relaxed">Código liviano y optimizado para reducir los tiempos de carga.</p>
+      </div>
+      <div class="card-lift bg-surface-card border border-border-subtle rounded-xl p-5">
+        <span class="material-symbols-outlined text-primary text-2xl icon-nudge">code</span>
+        <h3 class="font-bold text-on-surface mt-4 mb-2">Sin plantillas genéricas</h3>
+        <p class="text-sm text-text-muted leading-relaxed">Cada página se desarrolla con código a medida, sin WordPress ni constructores pesados.</p>
       </div>
     </div>
   </div>
@@ -654,11 +786,11 @@
   <div class="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
     <div class="card-lift flex gap-4 bg-surface-card border border-border-subtle rounded-xl p-5">
       <span class="material-symbols-outlined text-primary text-2xl shrink-0 icon-nudge">palette</span>
-      <div><h4 class="font-bold mb-1">Diseño personalizado</h4><p class="text-sm text-text-muted">Desde cero según tu servicio, colores e identidad. Sin plantillas genéricas.</p></div>
+      <div><h4 class="font-bold mb-1">Diseño personalizado</h4><p class="text-sm text-text-muted">Desde cero según tu servicio, colores e identidad.</p></div>
     </div>
     <div class="card-lift flex gap-4 bg-surface-card border border-border-subtle rounded-xl p-5">
       <span class="material-symbols-outlined text-primary text-2xl shrink-0 icon-nudge">smartphone</span>
-      <div><h4 class="font-bold mb-1">Optimizada para celular</h4><p class="text-sm text-text-muted">Se ve y funciona perfectamente en teléfonos.</p></div>
+      <div><h4 class="font-bold mb-1">Contenido claro</h4><p class="text-sm text-text-muted">Una estructura simple para que entiendan tu servicio sin confusión.</p></div>
     </div>
     <div class="card-lift flex gap-4 bg-surface-card border border-border-subtle rounded-xl p-5">
       <span class="material-symbols-outlined text-primary text-2xl shrink-0 icon-nudge">chat</span>
@@ -726,12 +858,12 @@
 <section class="reveal py-16 md:py-28 px-5 md:px-6 max-w-container mx-auto" id="quien-soy">
   <div class="max-w-lg mx-auto text-center">
     <span class="text-xs font-bold tracking-widest uppercase text-primary mb-4 block">Sobre mí</span>
-    <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-8">Quién está detrás de MarquezWeb</h2>
+    <h2 class="font-display text-2xl md:text-4xl text-on-surface mb-8">Conocé a quien trabaja en tu página</h2>
     <img src="manuel-marquez-desarrollador-web.webp" alt="Manuel Márquez" class="mx-auto size-40 rounded-full object-cover border-2 border-primary/40 mb-8" width="160" height="160"/>
     <div class="card-lift bg-surface-card border border-border-subtle rounded-xl p-6 text-left">
-      <h3 class="font-display text-xl font-bold">Manuel Márquez</h3>
-      <p class="text-xs font-bold uppercase tracking-widest text-primary mt-1">Desarrollador Web · MarquezWeb</p>
-      <p class="mt-4 text-sm text-text-muted leading-relaxed">Trabajo personalmente en cada proyecto: hablás directo conmigo, entiendo tu servicio, diseño la página y me encargo del desarrollo de principio a fin.</p>
+      <h3 class="font-display text-xl font-bold">Soy Manuel Márquez, desarrollador web.</h3>
+      <p class="text-xs font-bold uppercase tracking-widest text-primary mt-1">MarquezWeb</p>
+      <p class="mt-4 text-sm text-text-muted leading-relaxed">Trabajo directamente con cada cliente para entender qué necesita comunicar, diseñar una página que represente bien su servicio y desarrollarla de principio a fin.</p>
       <ul class="mt-5 space-y-3 text-sm font-medium">
         <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg">school</span> Formación en programación — UTN Córdoba</li>
         <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-lg">folder_open</span> Proyectos publicados para salud, gastronomía y servicios</li>
@@ -757,8 +889,8 @@
       <h2 class="font-display text-2xl md:text-4xl text-on-surface">FAQ</h2>
     </div>
     <div class="space-y-3" id="faq-list">
-      <div class="faq-item open bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
-        <button type="button" class="faq-q w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold" aria-expanded="true">¿Me van a encontrar en Google? <span class="material-symbols-outlined faq-icon text-primary transition-transform">expand_more</span></button>
+      <div class="faq-item bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
+        <button type="button" class="faq-q w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold" aria-expanded="false">¿Me van a encontrar en Google? <span class="material-symbols-outlined faq-icon text-primary transition-transform">expand_more</span></button>
         <div class="faq-a px-5 text-sm text-text-muted leading-relaxed">Tu página va a estar preparada técnicamente para aparecer en Google. El posicionamiento orgánico lleva tiempo, pero la base técnica va a estar bien hecha desde el día 1.</div>
       </div>
       <div class="faq-item bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
@@ -767,7 +899,7 @@
       </div>
       <div class="faq-item bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
         <button type="button" class="faq-q w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold" aria-expanded="false">¿Necesito pagar hosting? <span class="material-symbols-outlined faq-icon text-primary transition-transform">expand_more</span></button>
-        <div class="faq-a px-5 text-sm text-text-muted leading-relaxed">No. El hosting está incluido. Solo pagás el dominio propio (.com.ar), cuya renovación anual ronda los $8.500.</div>
+        <div class="faq-a px-5 text-sm text-text-muted leading-relaxed">No. El hosting está incluido. Solo pagás el dominio propio, que se abona anualmente.</div>
       </div>
       <div class="faq-item bg-surface-card border border-border-subtle rounded-xl overflow-hidden">
         <button type="button" class="faq-q w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-sm font-bold" aria-expanded="false">¿Puedo editar la página después? <span class="material-symbols-outlined faq-icon text-primary transition-transform">expand_more</span></button>
