@@ -116,6 +116,43 @@
   .hero-visual { width: 100%; }
   .hero-frame { border-radius: 1rem; }
 
+  /* ── Portfolio cards ── */
+  .portfolio-cards { align-items: stretch; }
+  .project-card {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    height: 100%;
+  }
+  .project-card-preview {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  .project-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+  .project-card-content {
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    padding: 1.25rem;
+  }
+  .project-card-category { margin-bottom: 0.375rem; }
+  .project-card-title {
+    margin-bottom: 1rem;
+    font-size: 1.375rem;
+    line-height: 1.2;
+  }
+  .project-card-summary {
+    display: grid;
+    align-content: start;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .project-card-summary p + p { margin-top: 0; }
+  .project-card-link { min-height: 2.75rem; }
+
   @media (min-width: 640px) {
     .hero-title { font-size: 2.75rem; }
   }
@@ -131,6 +168,7 @@
   }
   @media (min-width: 1280px) {
     .hero-layout { gap: 5rem; }
+    .portfolio-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   }
 
   /* ── Scroll reveal (fast & soft) ── */
@@ -685,53 +723,69 @@
   </div>
 
   <h3 class="font-display text-xl text-on-surface mb-8 border-b border-border-subtle pb-4">Páginas web y landing pages</h3>
-  <div class="grid md:grid-cols-3 gap-8">
+  <div class="portfolio-cards grid md:grid-cols-2 xl:grid-cols-4 gap-8">
     <!-- Project cards -->
-    <article class="reveal reveal-d1 card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden group flex flex-col">
-      <div class="h-56 overflow-hidden border-b border-border-subtle relative">
-        <img src="camipsicope.webp" alt="Landing psicopedagoga" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
+    <article class="project-card reveal reveal-d1 card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden group flex flex-col">
+      <div class="project-card-preview overflow-hidden border-b border-border-subtle relative">
+        <img src="camipsicope.webp" alt="Landing psicopedagoga" class="project-card-image w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
         <span class="absolute top-4 left-4 bg-background/90 backdrop-blur text-xs font-bold px-3 py-1 rounded border border-border-subtle flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> En producción</span>
       </div>
-      <div class="p-7 flex flex-col flex-grow">
-        <p class="text-xs font-bold uppercase tracking-wider text-text-muted mb-2">Sector Salud / Educación</p>
-        <h4 class="font-display text-2xl text-on-surface mb-5 font-bold">Psicopedagoga</h4>
-        <div class="space-y-3 mb-6 flex-grow text-sm">
-          <p><span class="text-error-alert font-bold block mb-0.5">Problema</span><span class="text-on-surface-variant">Los padres no confiaban en contactar a una profesional sin presencia online.</span></p>
-          <p><span class="text-primary font-bold block mb-0.5">Solución</span><span class="text-on-surface-variant">Página cálida y profesional que genera confianza y lleva al WhatsApp.</span></p>
+      <div class="project-card-content">
+        <p class="project-card-category text-xs font-bold uppercase tracking-wider text-text-muted mb-2">Sector Salud / Educación</p>
+        <h4 class="project-card-title font-display text-2xl text-on-surface mb-5 font-bold">Psicopedagoga</h4>
+        <div class="project-card-summary text-sm">
+          <p><span class="text-error-alert font-bold block mb-0.5">Problema</span><span class="text-on-surface-variant">No tenía un espacio online propio para presentar sus servicios de forma clara y profesional.</span></p>
+          <p><span class="text-primary font-bold block mb-0.5">Solución</span><span class="text-on-surface-variant">Página profesional que organiza sus servicios y facilita el contacto por WhatsApp.</span></p>
         </div>
-        <a class="w-full inline-flex justify-center items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://camipsicope.com.ar" target="_blank" rel="noopener noreferrer">Ver proyecto <span class="material-symbols-outlined text-base">open_in_new</span></a>
+        <a class="project-card-link w-full inline-flex justify-center items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://camipsicope.com.ar" target="_blank" rel="noopener noreferrer">Ver proyecto <span class="material-symbols-outlined text-base">open_in_new</span></a>
       </div>
     </article>
 
-    <article class="reveal reveal-d2 card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden group flex flex-col">
-      <div class="h-56 overflow-hidden border-b border-border-subtle relative">
-        <img src="comerenserio.webp" alt="Landing viandas" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
+    <article class="project-card reveal reveal-d2 card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden group flex flex-col">
+      <div class="project-card-preview overflow-hidden border-b border-border-subtle relative">
+        <img src="comerenserio.webp" alt="Landing viandas" class="project-card-image w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
         <span class="absolute top-4 left-4 bg-background/90 backdrop-blur text-xs font-bold px-3 py-1 rounded border border-border-subtle flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> En producción</span>
       </div>
-      <div class="p-7 flex flex-col flex-grow">
-        <p class="text-xs font-bold uppercase tracking-wider text-text-muted mb-2">Sector Gastronómico</p>
-        <h4 class="font-display text-2xl text-on-surface mb-5 font-bold">Negocio de Viandas</h4>
-        <div class="space-y-3 mb-6 flex-grow text-sm">
+      <div class="project-card-content">
+        <p class="project-card-category text-xs font-bold uppercase tracking-wider text-text-muted mb-2">Sector Gastronómico</p>
+        <h4 class="project-card-title font-display text-2xl text-on-surface mb-5 font-bold">Negocio de Viandas</h4>
+        <div class="project-card-summary text-sm">
           <p><span class="text-error-alert font-bold block mb-0.5">Problema</span><span class="text-on-surface-variant">Pedidos por Instagram de forma desordenada y lenta.</span></p>
           <p><span class="text-primary font-bold block mb-0.5">Solución</span><span class="text-on-surface-variant">Página mobile-first: eligen menú y piden en menos de 1 minuto.</span></p>
         </div>
-        <a class="w-full inline-flex justify-center items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://comerenserio.com.ar" target="_blank" rel="noopener noreferrer">Ver proyecto <span class="material-symbols-outlined text-base">open_in_new</span></a>
+        <a class="project-card-link w-full inline-flex justify-center items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://comerenserio.com.ar" target="_blank" rel="noopener noreferrer">Ver proyecto <span class="material-symbols-outlined text-base">open_in_new</span></a>
       </div>
     </article>
 
-    <article class="reveal reveal-d3 card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden group flex flex-col">
-      <div class="h-56 overflow-hidden border-b border-border-subtle relative">
-        <img src="cejuf-consultorios.png" alt="Consultorios médicos" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
+    <article class="project-card reveal reveal-d3 card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden group flex flex-col">
+      <div class="project-card-preview overflow-hidden border-b border-border-subtle relative">
+        <img src="cejuf-consultorios.png" alt="Consultorios médicos" class="project-card-image w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
         <span class="absolute top-4 left-4 bg-background/90 backdrop-blur text-xs font-bold px-3 py-1 rounded border border-border-subtle flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> En producción</span>
       </div>
-      <div class="p-7 flex flex-col flex-grow">
-        <p class="text-xs font-bold uppercase tracking-wider text-text-muted mb-2">Sector Salud</p>
-        <h4 class="font-display text-2xl text-on-surface mb-5 font-bold">Consultorios Médicos</h4>
-        <div class="space-y-3 mb-6 flex-grow text-sm">
-          <p><span class="text-error-alert font-bold block mb-0.5">Problema</span><span class="text-on-surface-variant">No encontraban cómo pedir turno fuera de horario.</span></p>
-          <p><span class="text-primary font-bold block mb-0.5">Solución</span><span class="text-on-surface-variant">Landing que transmite confianza y guía al WhatsApp en segundos.</span></p>
+      <div class="project-card-content">
+        <p class="project-card-category text-xs font-bold uppercase tracking-wider text-text-muted mb-2">Sector Salud</p>
+        <h4 class="project-card-title font-display text-2xl text-on-surface mb-5 font-bold">Consultorios Médicos</h4>
+        <div class="project-card-summary text-sm">
+          <p><span class="text-error-alert font-bold block mb-0.5">Problema</span><span class="text-on-surface-variant">La información estaba dispersa principalmente en Instagram y no tenían un sitio centralizado.</span></p>
+          <p><span class="text-primary font-bold block mb-0.5">Solución</span><span class="text-on-surface-variant">Página centralizada que organiza toda la información y guía al paciente hacia WhatsApp.</span></p>
         </div>
-        <a class="w-full inline-flex justify-center items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://manumarquez7.github.io/CEJUF-Consultorios/" target="_blank" rel="noopener noreferrer">Ver proyecto <span class="material-symbols-outlined text-base">open_in_new</span></a>
+        <a class="project-card-link w-full inline-flex justify-center items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://manumarquez7.github.io/CEJUF-Consultorios/" target="_blank" rel="noopener noreferrer">Ver proyecto <span class="material-symbols-outlined text-base">open_in_new</span></a>
+      </div>
+    </article>
+
+    <article class="project-card reveal reveal-d4 card-lift bg-surface-card border border-border-subtle rounded-xl overflow-hidden group flex flex-col">
+      <div class="project-card-preview overflow-hidden border-b border-border-subtle relative">
+        <img src="granja-porcina.png" alt="Sitio web de Granja Porcina" class="project-card-image w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"/>
+        <span class="absolute top-4 left-4 bg-background/90 backdrop-blur text-xs font-bold px-3 py-1 rounded border border-border-subtle flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> En producción</span>
+      </div>
+      <div class="project-card-content">
+        <p class="project-card-category text-xs font-bold uppercase tracking-wider text-text-muted mb-2">Sector Alimenticio</p>
+        <h4 class="project-card-title font-display text-2xl text-on-surface mb-5 font-bold">Granja Porcina</h4>
+        <div class="project-card-summary text-sm">
+          <p><span class="text-error-alert font-bold block mb-0.5">Problema</span><span class="text-on-surface-variant">La información sobre sus productos y cortes era difícil de consultar.</span></p>
+          <p><span class="text-primary font-bold block mb-0.5">Solución</span><span class="text-on-surface-variant">Sitio visual que presenta sus productos, cortes y locales de forma clara y profesional.</span></p>
+        </div>
+        <a class="project-card-link w-full inline-flex justify-center items-center gap-2 bg-surface-variant hover:bg-surface-bright px-5 py-3 rounded text-sm font-bold border border-border-subtle transition-colors" href="https://granjaporcinarg.com.ar" target="_blank" rel="noopener noreferrer">Ver proyecto <span class="material-symbols-outlined text-base">open_in_new</span></a>
       </div>
     </article>
 
