@@ -73,17 +73,56 @@
       var was = item.classList.contains("open");
       document.querySelectorAll(".faq-item").forEach(function (i) {
         i.classList.remove("open");
+        var answer = i.querySelector(".faq-a");
+        if (answer) answer.style.maxHeight = "";
         var q = i.querySelector(".faq-q");
         if (q) q.setAttribute("aria-expanded", "false");
       });
       if (!was) {
         item.classList.add("open");
         btn.setAttribute("aria-expanded", "true");
+        var answer = item.querySelector(".faq-a");
+        if (answer) answer.style.maxHeight = (answer.scrollHeight + 24) + "px";
       }
     });
   });
 
-  // Reveal
+  window.addEventListener("resize", function () {
+    document.querySelectorAll(".faq-item.open .faq-a").forEach(function (answer) {
+      answer.style.maxHeight = (answer.scrollHeight + 24) + "px";
+    });
+  });
+
+  // Small, bounded depth on the hero artwork; no scroll or touch tracking.
+  var showcase = document.querySelector(".hero-showcase");
+  var motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  if (showcase) {
+    var frame = 0;
+    function resetShowcase() {
+      cancelAnimationFrame(frame);
+      showcase.style.removeProperty("--showcase-x");
+      showcase.style.removeProperty("--showcase-y");
+      showcase.style.removeProperty("--showcase-shift");
+    }
+    showcase.addEventListener("pointermove", function (event) {
+      if (motion.matches || !finePointer.matches) return;
+      var bounds = showcase.getBoundingClientRect();
+      var x = (event.clientX - bounds.left) / bounds.width - .5;
+      var y = (event.clientY - bounds.top) / bounds.height - .5;
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(function () {
+        showcase.style.setProperty("--showcase-x", (-y * 3) + "deg");
+        showcase.style.setProperty("--showcase-y", (x * 3) + "deg");
+        showcase.style.setProperty("--showcase-shift", (y * -5) + "px");
+      });
+    });
+    showcase.addEventListener("pointerleave", resetShowcase);
+    motion.addEventListener("change", resetShowcase);
+    finePointer.addEventListener("change", resetShowcase);
+  }
+
+  // Reveal: observe the start of large sections, including nested cards.
   var nodes = document.querySelectorAll(".reveal");
   if (!nodes.length) return;
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -103,7 +142,8 @@
         }
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -36px 0px" }
+    { threshold: 0, rootMargin: "0px 0px -24px 0px" }
   );
   nodes.forEach(function (el) { io.observe(el); });
+  document.documentElement.classList.add("motion-ready");
 })();
