@@ -43,8 +43,17 @@
 
   // Navbar scroll
   var nav = document.getElementById("navbar");
+  var progress = document.querySelector(".scroll-progress");
+  var sectionLinks = Array.prototype.map.call(document.querySelectorAll(".site-nav .nav-link[href^='#']"), function (link) {
+    return { link: link, section: document.querySelector(link.getAttribute("href")) };
+  }).filter(function (item) { return item.section; });
+  var activeSection = null;
   function onScroll() {
     var y = window.scrollY || 0;
+    if (progress) {
+      var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.transform = "scaleX(" + (scrollable > 0 ? Math.min(1, Math.max(0, y / scrollable)) : 0) + ")";
+    }
     if (nav) {
       if (y > 20) {
         nav.classList.add("shadow-md", "bg-background/95");
@@ -53,6 +62,21 @@
         nav.classList.remove("shadow-md", "bg-background/95");
         nav.classList.add("bg-background/90");
       }
+    }
+    var current = null;
+    sectionLinks.forEach(function (item) {
+      if (item.section.getBoundingClientRect().top <= 140) current = item.link;
+    });
+    if (current !== activeSection) {
+      if (activeSection) {
+        activeSection.classList.remove("is-active");
+        activeSection.removeAttribute("aria-current");
+      }
+      if (current) {
+        current.classList.add("is-active");
+        current.setAttribute("aria-current", "location");
+      }
+      activeSection = current;
     }
     var sticky = document.getElementById("sticky-cta");
     if (sticky) {
@@ -65,6 +89,7 @@
   }
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
 
   // FAQ
   document.querySelectorAll(".faq-q").forEach(function (btn) {
@@ -97,6 +122,54 @@
   var showcase = document.querySelector(".hero-showcase");
   var motion = window.matchMedia("(prefers-reduced-motion: reduce)");
   var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+  var heroVideo = document.getElementById("hero-background-video");
+  if (heroVideo) {
+    var heroSection = heroVideo.closest(".hero-section");
+    var heroVideoToggle = document.getElementById("hero-video-toggle");
+    var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    var pausedByUser = false;
+    function updateVideoToggle() {
+      if (!heroVideoToggle) return;
+      heroVideoToggle.setAttribute("aria-label", pausedByUser ? "Reproducir video de fondo" : "Pausar video de fondo");
+      heroVideoToggle.querySelector(".material-symbols-outlined").textContent = pausedByUser ? "play_arrow" : "pause";
+      heroVideoToggle.querySelector(".hero-video-toggle-label").textContent = pausedByUser ? "Reproducir" : "Pausar";
+    }
+    function syncHeroVideo() {
+      if (motion.matches || (connection && connection.saveData)) {
+        heroVideo.pause();
+        heroSection.classList.remove("video-playing", "video-ready");
+        pausedByUser = false;
+        updateVideoToggle();
+        if (heroVideo.hasAttribute("src")) {
+          heroVideo.removeAttribute("src");
+          heroVideo.load();
+        }
+        return;
+      }
+      if (pausedByUser) {
+        heroVideo.pause();
+        heroSection.classList.remove("video-playing");
+        return;
+      }
+      heroVideo.muted = true;
+      if (!heroVideo.hasAttribute("src")) heroVideo.src = heroVideo.dataset.src;
+      var playback = heroVideo.play();
+      if (playback && typeof playback.catch === "function") {
+        playback.catch(function () { heroSection.classList.remove("video-playing", "video-ready"); });
+      }
+    }
+    heroVideo.addEventListener("playing", function () { heroSection.classList.add("video-playing", "video-ready"); });
+    heroVideo.addEventListener("pause", function () { heroSection.classList.remove("video-playing"); });
+    heroVideo.addEventListener("error", function () { heroSection.classList.remove("video-playing", "video-ready"); });
+    if (heroVideoToggle) heroVideoToggle.addEventListener("click", function () {
+      pausedByUser = !pausedByUser;
+      updateVideoToggle();
+      syncHeroVideo();
+    });
+    motion.addEventListener("change", syncHeroVideo);
+    if (connection && connection.addEventListener) connection.addEventListener("change", syncHeroVideo);
+    syncHeroVideo();
+  }
   if (showcase) {
     var frame = 0;
     function resetShowcase() {
