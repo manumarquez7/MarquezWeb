@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html class="dark scroll-smooth" lang="es-AR">
 <head>
-<!-- Google Tag Manager -->
+<!-- Google Tag Manager: deferred until the visitor interacts, to protect the initial render -->
 <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-            'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        var loaded = false;
+        var events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+        function loadTagManager() {
+            if (loaded) return;
+            loaded = true;
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0];
+            var j = d.createElement(s);
+            var dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+            events.forEach(function (eventName) {
+                w.removeEventListener(eventName, loadTagManager);
+            });
+        }
+        events.forEach(function (eventName) {
+            w.addEventListener(eventName, loadTagManager, { once: true, passive: true });
+        });
     })(window, document, 'script', 'dataLayer', 'GTM-W598GFZP');</script>
 <!-- End Google Tag Manager -->
 <meta charset="utf-8"/>
@@ -41,8 +55,10 @@
 <link rel="apple-touch-icon" href="logo.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Libre+Caslon+Text:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&display=swap" rel="stylesheet"/></noscript>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet"/></noscript>
 <link rel="stylesheet" href="output.css"/>
 <style>
   .text-gradient {
@@ -567,9 +583,6 @@
 
 <!-- HERO -->
 <section class="hero-section relative flex items-center py-16 md:py-24 lg:py-[7.5rem] overflow-hidden">
-  <video id="hero-background-video" class="hero-background-video" data-src="hero-background.mp4" autoplay muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
-  <div class="hero-video-shade" aria-hidden="true"></div>
-  <button type="button" class="hero-video-toggle" id="hero-video-toggle" aria-label="Pausar video de fondo"><span class="material-symbols-outlined" aria-hidden="true">pause</span><span class="hero-video-toggle-label">Pausar</span></button>
   <div class="relative z-10 w-full max-w-container mx-auto px-5 md:px-6">
     <div class="hero-layout grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
       <!-- Copy -->
@@ -612,11 +625,11 @@
         <div class="hero-showcase">
           <figure class="showcase-window showcase-main">
             <figcaption class="showcase-toolbar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>CEJUF · Consultorios</span><span class="window-status" aria-hidden="true"></span></figcaption>
-            <img src="cejuf-hero.webp" alt="Proyecto real de MarquezWeb: página de CEJUF Consultorios" width="1200" height="563" loading="eager" fetchpriority="high" decoding="async"/>
+            <img src="cejuf-hero.webp" alt="Proyecto real de MarquezWeb: página de CEJUF Consultorios" width="1200" height="563" loading="lazy" fetchpriority="low" decoding="async"/>
           </figure>
           <figure class="showcase-window showcase-secondary">
             <figcaption class="showcase-toolbar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>camipsicope.com.ar</span></figcaption>
-            <img src="camipsicope-hero.webp" alt="Proyecto real de MarquezWeb: página de Cami Psicope" width="1200" height="530" loading="eager" decoding="async"/>
+            <img src="camipsicope-hero.webp" alt="Proyecto real de MarquezWeb: página de Cami Psicope" width="1200" height="530" loading="lazy" fetchpriority="low" decoding="async"/>
           </figure>
         </div>
       </div>

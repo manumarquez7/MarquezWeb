@@ -15,12 +15,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid #c0a3ff; outline-offs
   background: radial-gradient(ellipse at 83% 42%, rgba(157,78,221,.1), transparent 52%), #111317;
   border-bottom: 1px solid rgba(157,78,221,.12);
 }
-.hero-background-video { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; pointer-events: none; transition: opacity .7s ease; }
-.hero-section.video-playing .hero-background-video { opacity: .82; }
-.hero-video-shade { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(17,19,23,.9), rgba(17,19,23,.64) 52%, rgba(17,19,23,.38)), linear-gradient(0deg, rgba(17,19,23,.55), transparent 55%); }
-.hero-video-toggle { position: absolute; right: 1.25rem; bottom: 1rem; z-index: 11; display: none; align-items: center; gap: .35rem; padding: .5rem .75rem; border: 1px solid rgba(192,163,255,.35); border-radius: 999px; background: rgba(17,19,23,.78); color: #f6f2f9; font: 600 .75rem/1 'Hanken Grotesk', sans-serif; cursor: pointer; backdrop-filter: blur(10px); }
-.hero-section.video-ready .hero-video-toggle { display: inline-flex; }
-.hero-video-toggle .material-symbols-outlined { font-size: 1rem; }
 .hero-layout { gap: 3rem; }
 .hero-copy { min-width: 0; }
 .hero-badge { margin-bottom: 1.6rem; padding: .5rem .8rem; }
@@ -201,9 +195,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid #c0a3ff; outline-offs
 }
 @media (max-width: 767px) {
   .hero-section { padding-top: 1.75rem; padding-bottom: 2.5rem; }
-  .hero-background-video { object-position: 68% center; }
-  .hero-video-shade { background: linear-gradient(180deg, rgba(17,19,23,.84), rgba(17,19,23,.67) 65%, rgba(17,19,23,.82)); }
-  .hero-video-toggle { right: .75rem; bottom: .5rem; }
   .hero-title { font-size: clamp(2.1rem, 7vw, 3rem); }
   .hero-badge { max-width: 100%; margin-bottom: 1.1rem; }
   .hero-badge > span:last-child { font-size: .7rem; }
@@ -229,8 +220,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid #c0a3ff; outline-offs
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto !important; }
-  .hero-background-video { display: none; }
-  .hero-video-toggle { display: none !important; }
   .motion-ready .reveal:not(.is-visible) { opacity: 1; transform: none; }
   .showcase-main, .showcase-secondary { transform: none; }
   .card-lift:hover, .btn-primary-motion:hover, .btn-wa-motion:hover { transform: none; }
