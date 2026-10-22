@@ -128,6 +128,8 @@
     var heroVideoToggle = document.getElementById("hero-video-toggle");
     var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
     var pausedByUser = false;
+    var videoLoadAllowed = false;
+    var heroInView = true;
     function updateVideoToggle() {
       if (!heroVideoToggle) return;
       heroVideoToggle.setAttribute("aria-label", pausedByUser ? "Reproducir video de fondo" : "Pausar video de fondo");
@@ -146,7 +148,7 @@
         }
         return;
       }
-      if (pausedByUser) {
+      if (!videoLoadAllowed || pausedByUser || !heroInView) {
         heroVideo.pause();
         heroSection.classList.remove("video-playing");
         return;
@@ -168,7 +170,26 @@
     });
     motion.addEventListener("change", syncHeroVideo);
     if (connection && connection.addEventListener) connection.addEventListener("change", syncHeroVideo);
-    syncHeroVideo();
+    if ("IntersectionObserver" in window) {
+      var heroVideoObserver = new IntersectionObserver(function (entries) {
+        heroInView = entries[0].isIntersecting;
+        syncHeroVideo();
+      }, { rootMargin: "120px 0px" });
+      heroVideoObserver.observe(heroSection);
+    }
+    function allowHeroVideoLoad() {
+      videoLoadAllowed = true;
+      syncHeroVideo();
+    }
+    function scheduleHeroVideoLoad() {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(allowHeroVideoLoad, { timeout: 1500 });
+      } else {
+        window.setTimeout(allowHeroVideoLoad, 600);
+      }
+    }
+    if (document.readyState === "complete") scheduleHeroVideoLoad();
+    else window.addEventListener("load", scheduleHeroVideoLoad, { once: true });
   }
   if (showcase) {
     var frame = 0;

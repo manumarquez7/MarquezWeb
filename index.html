@@ -467,16 +467,66 @@
 <link rel="stylesheet" href="visual.css"/>
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "MarquezWeb",
-    "url": "https://marquezweb.com.ar/",
-    "logo": "https://marquezweb.com.ar/logo.png",
-    "description": "Páginas web para negocios y servicios: presencia propia, contenido claro, base preparada para buscadores y contacto directo por WhatsApp.",
-    "founder": { "@type": "Person", "name": "Manuel Marquez" },
-    "areaServed": "AR",
-    "serviceType": "Diseño de páginas web",
-    "email": "manuelmarquez2537@gmail.com"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://marquezweb.com.ar/#organization",
+      "name": "MarquezWeb",
+      "url": "https://marquezweb.com.ar/",
+      "logo": { "@type": "ImageObject", "url": "https://marquezweb.com.ar/logo.png" },
+      "image": "https://marquezweb.com.ar/og-image.webp?v=4",
+      "description": "Páginas web para negocios y servicios: presencia propia, contenido claro, base preparada para buscadores y contacto directo por WhatsApp.",
+      "email": "manuelmarquez2537@gmail.com",
+      "telephone": "+54 9 3513 06-6687",
+      "founder": { "@id": "https://marquezweb.com.ar/#manuel-marquez" },
+      "areaServed": { "@type": "Country", "name": "Argentina" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://marquezweb.com.ar/#manuel-marquez",
+      "name": "Manuel Márquez",
+      "jobTitle": "Desarrollador web",
+      "worksFor": { "@id": "https://marquezweb.com.ar/#organization" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://marquezweb.com.ar/#website",
+      "url": "https://marquezweb.com.ar/",
+      "name": "MarquezWeb",
+      "inLanguage": "es-AR",
+      "publisher": { "@id": "https://marquezweb.com.ar/#organization" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://marquezweb.com.ar/#web-base",
+      "name": "Web Base",
+      "serviceType": "Diseño y desarrollo de páginas web",
+      "description": "Una página web para que tu negocio tenga presencia online y tus clientes puedan encontrarte y contactarte fácilmente.",
+      "provider": { "@id": "https://marquezweb.com.ar/#organization" },
+      "areaServed": { "@type": "Country", "name": "Argentina" },
+      "offers": { "@type": "Offer", "price": "200000", "priceCurrency": "ARS", "url": "https://marquezweb.com.ar/#precios" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://marquezweb.com.ar/#web-profesional",
+      "name": "Web Profesional",
+      "serviceType": "Diseño y desarrollo de páginas web",
+      "description": "Una página web más completa, pensada para mostrar mejor tu negocio, generar confianza y facilitar que los visitantes se conviertan en clientes.",
+      "provider": { "@id": "https://marquezweb.com.ar/#organization" },
+      "areaServed": { "@type": "Country", "name": "Argentina" },
+      "offers": { "@type": "Offer", "price": "300000", "priceCurrency": "ARS", "url": "https://marquezweb.com.ar/#precios" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://marquezweb.com.ar/#mantenimiento",
+      "name": "Mantenimiento mensual de páginas web",
+      "serviceType": "Mantenimiento de páginas web",
+      "description": "Actualización mensual de fotos, información y secciones para mantener la página al día.",
+      "provider": { "@id": "https://marquezweb.com.ar/#organization" },
+      "areaServed": { "@type": "Country", "name": "Argentina" }
+    }
+  ]
 }
 </script>
 </head>
@@ -535,7 +585,7 @@
           Una web propia para mostrar lo que ofrecés, transmitir confianza y facilitar que te contacten por WhatsApp.
         </p>
         <div class="hero-specialization hero-in hero-in-d3 mb-9 max-w-xl border-l-2 border-primary/80 pl-4">
-          <p class="text-sm font-semibold text-on-surface">Especializado en profesionales y servicios que necesitan convertir visitas en consultas.</p>
+          <p class="text-sm font-semibold text-on-surface">Especializado en negocios y servicios que necesitan convertir visitas en consultas.</p>
           <p class="mt-2.5 text-[11px] font-bold uppercase tracking-[0.08em] leading-relaxed text-text-muted">Salud <span class="mx-1.5 text-primary">·</span> Profesionales independientes <span class="mx-1.5 text-primary">·</span> Servicios <span class="mx-1.5 text-primary">·</span> Negocios locales</p>
         </div>
         <div class="hero-actions hero-in hero-in-d4 flex flex-col sm:flex-row gap-5 items-start sm:items-center">
@@ -913,7 +963,7 @@
 <footer class="bg-surface-container-lowest border-t border-border-subtle py-10 px-5 md:px-6">
   <div class="max-w-container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
     <a href="#" class="flex items-center gap-2">
-      <img src="logo.png" alt="" class="h-9 w-9 rounded-full object-cover"/>
+      <img src="logo.png" alt="" class="h-9 w-9 rounded-full object-cover" width="36" height="36"/>
       <span class="font-bold">Marquez<span class="text-primary">Web</span></span>
     </a>
     <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-sm font-medium text-text-muted">
@@ -922,7 +972,7 @@
     </div>
   </div>
   <div class="max-w-container mx-auto mt-8 text-center md:text-left text-xs text-text-muted flex flex-col md:flex-row md:justify-between gap-2">
-    <p>Diseño de páginas web para profesionales. Hecho en Argentina.</p>
+    <p>Diseño de páginas web para negocios y servicios. Hecho en Argentina.</p>
     <p>© <span id="year"></span> MarquezWeb. Todos los derechos reservados.</p>
   </div>
 </footer>

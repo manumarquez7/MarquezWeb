@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="background" x1="70" y1="40" x2="1120" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17171E"/>
+      <stop offset="1" stop-color="#101116"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(944 298) rotate(90) scale(350 455)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8129C2" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#8129C2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="590" y="65" width="650" height="590" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="16"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.52 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <clipPath id="back-screen"><rect x="676" y="112" width="444" height="238" rx="13"/></clipPath>
+    <clipPath id="front-screen"><rect x="722" y="331" width="400" height="222" rx="13"/></clipPath>
+    <clipPath id="logo-mask"><circle cx="103" cy="95" r="33"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <path d="M600 0v630M700 0v630M800 0v630M900 0v630M1000 0v630M1100 0v630" stroke="#fff" stroke-opacity=".025"/>
+  <path d="M600 70h600M600 170h600M600 270h600M600 370h600M600 470h600M600 570h600" stroke="#fff" stroke-opacity=".025"/>
+
+  <image href="logo.png" x="70" y="62" width="66" height="66" preserveAspectRatio="xMidYMid meet" clip-path="url(#logo-mask)"/>
+  <text x="148" y="104" fill="#F7F4FA" font-family="Arial, sans-serif" font-size="27" font-weight="700" letter-spacing="-.8">Marquez<tspan fill="#B981E4">Web</tspan></text>
+
+  <text x="74" y="181" fill="#C79BEA" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2.5">DISEÑO WEB</text>
+  <text x="70" y="259" fill="#F8F6FA" font-family="Arial, sans-serif" font-size="54" font-weight="700" letter-spacing="-2.1">Páginas web</text>
+  <text x="70" y="321" fill="#F8F6FA" font-family="Arial, sans-serif" font-size="49" font-weight="700" letter-spacing="-2.1">para negocios</text>
+  <text x="70" y="381" fill="#F8F6FA" font-family="Arial, sans-serif" font-size="49" font-weight="700" letter-spacing="-2.1">y servicios.</text>
+  <rect x="74" y="414" width="58" height="4" rx="2" fill="#9D4EDD"/>
+  <text x="74" y="458" fill="#D4CEDB" font-family="Arial, sans-serif" font-size="20" font-weight="400">Información clara y contacto</text>
+  <text x="74" y="488" fill="#D4CEDB" font-family="Arial, sans-serif" font-size="20" font-weight="400">directo por WhatsApp.</text>
+  <circle cx="80" cy="548" r="4" fill="#B981E4"/>
+  <text x="94" y="553" fill="#8E8997" font-family="Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="1.1">MARQUEZWEB.COM.AR</text>
+
+  <g filter="url(#shadow)">
+    <rect x="662" y="98" width="472" height="266" rx="17" fill="#202027" stroke="#A877C9" stroke-opacity=".5" stroke-width="1.5"/>
+    <rect x="676" y="112" width="444" height="238" rx="13" fill="#F6F4F2"/>
+    <image href="cejuf-card.webp" x="676" y="112" width="444" height="238" preserveAspectRatio="xMidYMid slice" clip-path="url(#back-screen)"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="708" y="317" width="428" height="250" rx="17" fill="#202027" stroke="#BE91DB" stroke-opacity=".7" stroke-width="1.5"/>
+    <rect x="722" y="331" width="400" height="222" rx="13" fill="#F6F4F2"/>
+    <image href="camipsicope-hero.webp" x="722" y="331" width="400" height="222" preserveAspectRatio="xMidYMid slice" clip-path="url(#front-screen)"/>
+  </g>
+</svg>
