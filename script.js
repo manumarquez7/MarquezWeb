@@ -37,6 +37,12 @@
   }
 
   if (btn) btn.addEventListener("click", function () { setMenu(!open); });
+  document.addEventListener("keydown", function (event) {
+    if (open && event.key === "Escape") { setMenu(false); btn.focus(); }
+  });
+  window.matchMedia("(min-width: 1280px)").addEventListener("change", function (event) {
+    if (event.matches && open) setMenu(false);
+  });
   document.querySelectorAll(".mobile-link").forEach(function (a) {
     a.addEventListener("click", function () { setMenu(false); });
   });
