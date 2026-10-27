@@ -61,7 +61,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #c0a3ff; outline-offs
 .window-dots i { width: 5px; height: 5px; background: #71627e; border-radius: 50%; }
 .window-status { margin-left: auto; width: 5px; height: 5px; background: #9d4edd; border-radius: 50%; }
 .showcase-window img { display: block; width: 100%; aspect-ratio: 1.9; object-fit: cover; object-position: center 30%; }
-.showcase-secondary img { aspect-ratio: 1.7; object-position: center 24%; }
+.showcase-secondary img { height: auto; aspect-ratio: auto; object-fit: contain; object-position: center; }
 .hero-in { animation-duration: .5s; }
 .hero-visual-in { animation-duration: .65s; animation-delay: .1s; }
 

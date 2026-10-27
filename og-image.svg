@@ -19,7 +19,7 @@
       <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
     </filter>
     <clipPath id="back-screen"><rect x="676" y="112" width="444" height="238" rx="13"/></clipPath>
-    <clipPath id="front-screen"><rect x="722" y="331" width="400" height="222" rx="13"/></clipPath>
+    <clipPath id="front-screen"><rect x="722" y="351" width="400" height="182" rx="13"/></clipPath>
     <clipPath id="logo-mask"><circle cx="103" cy="95" r="33"/></clipPath>
   </defs>
 
@@ -48,8 +48,8 @@
   </g>
 
   <g filter="url(#shadow)">
-    <rect x="708" y="317" width="428" height="250" rx="17" fill="#202027" stroke="#BE91DB" stroke-opacity=".7" stroke-width="1.5"/>
-    <rect x="722" y="331" width="400" height="222" rx="13" fill="#F6F4F2"/>
-    <image href="camipsicope-hero.webp" x="722" y="331" width="400" height="222" preserveAspectRatio="xMidYMid slice" clip-path="url(#front-screen)"/>
+    <rect x="708" y="337" width="428" height="210" rx="17" fill="#202027" stroke="#BE91DB" stroke-opacity=".7" stroke-width="1.5"/>
+    <rect x="722" y="351" width="400" height="182" rx="13" fill="#F6F4F2"/>
+    <image href="del-norte-propiedades-card.webp" x="722" y="351" width="400" height="182" preserveAspectRatio="xMidYMid meet" clip-path="url(#front-screen)"/>
   </g>
 </svg>
