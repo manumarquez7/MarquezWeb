@@ -54,14 +54,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid #c0a3ff; outline-offs
   background: #191b20; box-shadow: 0 24px 50px rgba(0,0,0,.32);
   transition: transform .55s var(--motion-ease), border-color .3s;
 }
-.showcase-main { width: 100%; transform: rotate(-1deg) rotateY(var(--showcase-y, 0deg)) rotateX(var(--showcase-x, 0deg)); }
-.showcase-secondary { position: relative; z-index: 1; width: 84%; margin: -3.25rem 0 0 auto; transform: rotate(2deg) translateY(var(--showcase-shift, 0px)); }
+.showcase-main { width: 92%; margin-right: auto; transform: rotate(-1deg) rotateY(var(--showcase-y, 0deg)) rotateX(var(--showcase-x, 0deg)); }
+.showcase-secondary { position: relative; z-index: 1; width: 92%; margin: -2rem 0 0 auto; transform: rotate(2deg) translateY(var(--showcase-shift, 0px)); }
 .showcase-toolbar { display: flex; align-items: center; gap: .8rem; padding: .7rem .85rem; font: 500 .72rem/1.3 'Hanken Grotesk', sans-serif; color: #c5bdd0; letter-spacing: .025em; }
 .window-dots { display: flex; gap: 4px; }
 .window-dots i { width: 5px; height: 5px; background: #71627e; border-radius: 50%; }
 .window-status { margin-left: auto; width: 5px; height: 5px; background: #9d4edd; border-radius: 50%; }
-.showcase-window img { display: block; width: 100%; aspect-ratio: 1.9; object-fit: cover; object-position: center 30%; }
-.showcase-secondary img { height: auto; aspect-ratio: auto; object-fit: contain; object-position: center; }
+.showcase-window img { display: block; width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; object-position: center; }
 .hero-in { animation-duration: .5s; }
 .hero-visual-in { animation-duration: .65s; animation-delay: .1s; }
 
@@ -217,7 +216,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #c0a3ff; outline-offs
   .hero-trust { margin-top: 1rem; }
   .hero-layout { gap: 1.25rem; }
   .hero-showcase { padding: .75rem .4rem; }
-  .showcase-secondary { width: 86%; margin-top: -1.5rem; }
+  .showcase-secondary { margin-top: -1.5rem; }
   .showcase-toolbar { padding: .6rem; font-size: .6rem; gap: .5rem; }
   #testimonios figure { padding: 1.5rem; }
   .portfolio-heading { margin-bottom: 2.75rem; }
